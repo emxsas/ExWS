@@ -19,13 +19,21 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script>  toastr.options = {"positionClass": "toast-top-full-width"};</script>
+    <script>  toastr.options = {"positionClass": "toast-top-right"};</script>
        <script src="control.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="./Images/logo.jpeg"Bootstrap" width="30" height="24">
+                  </a>
+                </div>
+              </nav>
             <a class="navbar-brand" href="#">Expertease</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,10 +44,10 @@
                         <a class="nav-link" href="#home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre Nosotros</a>
+                        <a class="nav-link" onclick="uncover('sobN')">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Servicios</a>
+                        <a class="nav-link" onclick="uncover('serv')">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contacto</a>
@@ -48,31 +56,50 @@
             </div>
         </nav>
     </header>
-    <div id="home">
-        <div>
-            <h2>Bienvenido a Expertease</h2>
-            <p>Déjalo en manos de expertos para obtener los mejores resultados.</p>
+   
+        <div class="row">
+            <div class="col-8">
+                <h2>Bienvenido a Expertease</h2>
+            </div>
+            <div class="col-2">
+                <a href="#home">
+                    <img src="./Images/logo.jpeg" alt="Logo de Expertease" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-2"></div>
+            
+        </div>
+        <div class="row">
+          
+            <div class="col-9"><p>Déjalo en manos de expertos para obtener los mejores resultados.</p></div>
+            
+        </div>
+  
+
+    <div class="row" id="sobN" style="display: none;">
+        <div class="col-12">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa dedicada a ofrecer soluciones tecnológicas innovadoras para mejorar tu negocio.</p>
         </div>
     </div>
 
-    <section id="about">
-        <h2>Sobre Nosotros</h2>
-        <p>Somos una empresa dedicada a ofrecer soluciones tecnológicas innovadoras para mejorar tu negocio.</p>
-    </section>
+    <div class="row" id="serv" style="display: none;">
+        <div class="col-12">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Desarrollo de Software</li>
+                <li>Consultoría Tecnológica</li>
+                <li>Soporte Técnico</li>
+            </ul>
+        </div>
+    </div>
 
-    <section id="services">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Desarrollo de Software</li>
-            <li>Consultoría Tecnológica</li>
-            <li>Soporte Técnico</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Para más información, contáctanos en <a href="mailto:info@empresa.com">info@empresa.com</a></p>
-    </section>
+    <div class="row" id="contact">
+        <div class="col-12">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos en <a href="mailto:info@empresa.com">info@empresa.com</a></p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2023 Empresa de Tecnología. Todos los derechos reservados.</p>
