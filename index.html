@@ -24,8 +24,8 @@
     <script>  toastr.options = {"positionClass": "toast-top-right"};</script>
        <script src="control.js"></script>
 </head>
-<body style="background-color: rgb(54, 54, 54);" >
-    <div id="main" class="container" style="background: #6e6e6e;" >
+<body style=" background-image: url('./Images/techBKG.jpg'); background-attachment: fixed; background-size: cover;" >
+    <div id="main" class="container" style="background: #6e6e6e;"></div>
     <header>
         <nav class="navbar navbar-expand-lg " style="background: #4d4d4d;">
             <nav class="navbar">
@@ -51,7 +51,7 @@
                         <a class="nav-link" onclick="uncover('serv')">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
+                        <a class="nav-link" onclick="uncover('cont')">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div class="row men" id="Cont" style="display: none;">
+    <div class="row men" id="cont" style="display: none;">
         <div class="col-12">
             <h2>Contacto</h2>
             <p >Para más información, contáctanos <a onclick="contForm();">AQUI</a></p>
