@@ -24,17 +24,18 @@
     <script>  toastr.options = {"positionClass": "toast-top-right"};</script>
        <script src="control.js"></script>
 </head>
-<body>
+<body style="background-color: rgb(54, 54, 54);" >
+    <div id="main" class="container" style="background: #6e6e6e;" >
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <nav class="navbar bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg " style="background: #4d4d4d;">
+            <nav class="navbar">
                 <div class="container">
                   <a class="navbar-brand" href="#">
                     <img src="./Images/logo.jpeg"Bootstrap" width="30" height="24">
                   </a>
                 </div>
               </nav>
-            <a class="navbar-brand" href="#">Expertease</a>
+            <a class="navbar-brand text-white" href="#" >Expertease</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -57,9 +58,10 @@
         </nav>
     </header>
    
-        <div class="row">
+        <div class="row ">
             <div class="col-8">
-                <h2>Bienvenido a Expertease</h2>
+                <div class="row"><h2 class="text-white">Bienvenido a Expertease</h2></div>
+                <div class="row text-white"><p>Déjalo en manos de expertos para obtener los mejores resultados.</p></div>
             </div>
             <div class="col-2">
                 <a href="#home">
@@ -69,21 +71,17 @@
             <div class="col-2"></div>
             
         </div>
-        <div class="row">
-          
-            <div class="col-9"><p>Déjalo en manos de expertos para obtener los mejores resultados.</p></div>
-            
-        </div>
+        
   
 
-    <div class="row" id="sobN" style="display: none;">
+    <div class="row men" id="sobN" style="display: none;">
         <div class="col-12">
             <h2>Sobre Nosotros</h2>
             <p>Somos una empresa dedicada a ofrecer soluciones tecnológicas innovadoras para mejorar tu negocio.</p>
         </div>
     </div>
 
-    <div class="row" id="serv" style="display: none;">
+    <div class="row men" id="serv" style="display: none;">
         <div class="col-12">
             <h2>Servicios</h2>
             <ul>
@@ -94,15 +92,16 @@
         </div>
     </div>
 
-    <div class="row" id="contact">
+    <div class="row men" id="Cont" style="display: none;">
         <div class="col-12">
             <h2>Contacto</h2>
-            <p>Para más información, contáctanos en <a href="mailto:info@empresa.com">info@empresa.com</a></p>
+            <p >Para más información, contáctanos <a onclick="contForm();">AQUI</a></p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 Empresa de Tecnología. Todos los derechos reservados.</p>
+        <p class="text-white">&copy; 2024 ExperteaseMX Todos los derechos reservados.</p>
     </footer>
+</div>
 </body>
 </html>
