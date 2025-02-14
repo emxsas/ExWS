@@ -62,12 +62,35 @@
     <div class="row " style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
         <div class="col-2"></div>
         <div class="col-8"> 
-            <div class="row justify-content-center align-items-center" style="height: 15vh; margin-bottom: 30vh;">
-        
-            <h1 class="text-black text-center" style="margin-top: 15vh;" >Transforma tu Negocio</h1>
-            <h3 class="text-black text-center">La promesa de la nube hecha realidad</h3>
-            
-           </div>
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center align-items-center hero-banner" style="height: 100vh; background-image: url('./Images/placeholdr.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                            <div class="col text-center">
+                                <h1 class="display-3">Transforma tu Negocio</h1>
+                                <h3>La promesa de la nube hecha realidad</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center align-items-center hero-banner" style="height: 100vh; background-image: url('./Images/anotherImage.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                            <div class="col text-center">
+                                <h1 class="display-3">Innovación Tecnológica</h1>
+                                <h3>Soluciones a tu medida</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
         <div class="col-2"></div>
         
