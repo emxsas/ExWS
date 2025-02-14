@@ -24,54 +24,55 @@
     <script>  toastr.options = {"positionClass": "toast-top-right"};</script>
        <script src="control.js"></script>
 </head>
-<body style=" background-image: url('./Images/techBKG.jpg'); background-attachment: fixed; background-size: cover;" >
-    <div id="main" class="container" style="background: #6e6e6e;">
-    <header>
-        <div class="d-flex justify-content-center"> 
-        <nav class="navbar navbar-expand-lg " style="background: #4d4d4d;">
-            <nav class="navbar">
-                <a class="navbar-brand" href="#">
-                <img src="./Images/logo.jpeg"Bootstrap" width="75" height="75">
-              </a>
-            </nav>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link text-white" href="#home">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link text-white" onclick="uncover('serv')">Servicios</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link text-white" onclick="uncover('sobN')">Sobre Nosotros</a>
-                </li>                   
-                <li class="nav-item">
-                <a class="nav-link text-white" onclick="uncover('cont')">Contacto</a>
-                </li>
-            </ul>
+<body style=" background: #4d4d4d;" >
+    <div id="main" class="container-fluid" style="margin: 0; padding: 0; width: 100%;">
+        <header>
+            <div class="row" style=" background: #4d4d4d;">
+                <div class="d-flex justify-content-center">
+                    <nav class="navbar navbar-expand-lg" style="background: #4d4d4d;">
+                        <nav class="navbar">
+                            <a class="navbar-brand" href="#">
+                                <img src="./Images/logo.jpeg" width="75" height="75">
+                            </a>
+                        </nav>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="#home">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" onclick="uncover('serv')">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" onclick="uncover('sobN')">Sobre Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" onclick="uncover('cont')">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </nav>
-    </div>
-    </div>
-    </header>
-   
-    <div class="row ">
-        <div class="col-10">
-            <div class="row justify-content-center align-items-center" style="height: 30vh;"></div>
+        </header>
+   <div class="container-fluid" style="background: #4d4d4d;">
+    <div class="row " style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
+        <div class="col-2"></div>
+        <div class="col-8"> 
+            <div class="row justify-content-center align-items-center" style="height: 15vh; margin-bottom: 30vh;">
         
-            <h1 class="text-black text-center">Transforma tu Negocio</h1>
+            <h1 class="text-black text-center" style="margin-top: 15vh;" >Transforma tu Negocio</h1>
             <h3 class="text-black text-center">La promesa de la nube hecha realidad</h3>
-            <div class="row justify-content-center align-items-center" style="height: 50vh;"></div>
-    </div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    </div>
+            
+           </div>
+        </div>
+        <div class="col-2"></div>
         
-  
+        
+    </div>
 
     <div class="row men" id="sobN" style="display: none;">
         <div class="col-12">
@@ -101,6 +102,7 @@
     <footer>
         <p class="text-white">&copy; 2024 ExpertEaseMX Todos los derechos reservados.</p>
     </footer>
+</div>
 </div>
 </body>
 </html>
