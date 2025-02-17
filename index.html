@@ -32,6 +32,27 @@
         .hero-banner {
             height: 10vh; /* Adjust the height as needed */
         }
+        p{ 
+            font-size: 0.9rem; 
+            margin: 0px;
+        }
+        @media (max-width: 768px) {
+                                        h1.display-3 {
+                                            font-size: 2rem;
+                                        }
+                                        h3 {
+                                            font-size: 1rem;
+                                        }
+         }
+                                    @media (max-width: 330px) {
+                                        h1.display-3 {
+                                            font-size: 1rem;
+                                        }
+                                        h3 {
+                                            font-size: 0.5rem;
+                                        }
+                                    }
+
         </style>   
 </head>
 <body style=" background: #4d4d4d;" >
@@ -51,7 +72,7 @@
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="#home">Inicio</a>
+                                    <a class="nav-link text-white" onclick="inicio()">Inicio</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" onclick="uncover('serv')">Servicios</a>
@@ -69,16 +90,17 @@
             </div>
         </header>
    <div class="container-fluid" style="background: #4d4d4d;">
-    <div class="row " style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
-        <div class="col-2"></div>
-        <div class="col-8"> 
+    <div class="row men ini" style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
+        <!--<div class="col-2 d-md-block d-none"></div>-->
+        <div class="col-12 col-md-12"> 
             <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row justify-content-center align-items-center hero-banner" style="height: 50vh; background-image: url('./Images/placeholdr.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                             <div class="col text-center">
-                                <h1 class="display-3">Transforma tu Negocio</h1>
-                                <h3>La promesa de la nube hecha realidad</h3>
+                                <h1 class="display-3" >Transforma tu Negocio</h1>
+                                <h3 >La promesa de la nube hecha realidad</h3>
+                               
                             </div>
                         </div>
                     </div>
@@ -118,29 +140,44 @@
                 </button>
             </div>
         </div>
-        <div class="col-2"></div>
+        <!--<div class="col-2 d-md-block d-none"></div>-->
         
         
     </div>
 
     <div class="container-fluid" style="margin: 0; padding: 0; width: 100%;">
-        <div class="row"></div>
-        <div class="row">
-            <div class="col-2 text-center">
+        <div class="row"><br></div>
+        <div class="row men ini">
+            <div class="col-3 text-center d-md-block d-none">
             </div>    
-            <div class="col-2 text-center">
-                <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX">
-                <a href="https://virtalus.com/hypercx-bento/">HyperCX Cloud</a>
+            <div class="col-4 col-md-2 text-center">
+               <div class="row">
+               <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX">
+               </div>
+               <div class="row"> <a href="https://virtalus.com/hypercx-bento/"><p>HyperCX Cloud</p></a></div>
             </div>
-            <div class="col-2 text-center">
+            <div class="col-4 col-md-2 text-center">
+            <div class="row">
                 <img src="./Images/sol-dr.png" class="img-fluid" alt="DR">
-                <a href="https://virtalus.com/hypercx-bento/">HyperCX Cloud</a>
             </div>
-            <div class="col-2 text-center">
+            <div class="row"> <a href="https://virtalus.com/hypercx-bento/"><p>HyperCX Cloud</p></a></div>
+            </div>
+            <div class="col-4 col-md-2 text-center">
+            <div class="row">
                 <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV">
-                <a href="https://virtalus.com/hypercx-bento/">HyperCX Cloud</a>
             </div>
+            <div class="row"> <a href="https://virtalus.com/hypercx-bento/"><p>HyperCX Cloud</p></a></div>
+            </div>
+            <div class="col-3 text-center d-md-block d-none">
         </div>
+        <style>
+            .row > .col-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            }
+        </style>
     </div>
     
 
