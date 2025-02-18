@@ -144,28 +144,29 @@
         
         
     </div>
-
-    <div class="container-fluid row justify-content-center align-items-center" style="margin: 0; padding: 0; width: 100%;">
+    <br>
+    <div class="container-fluid row justify-content-center align-items-center" style="height: 50vh" style="margin: 0; padding: 0; width: 100%;">
         <div class="row"><br></div>
-        <div class="row men ini">
+        <div class="row men ini text-center text-white">
+            <H1>Soluciones de Nube</H1>
             <div class="col-3 d-md-block d-none">
             </div>    
             <div class="col-2 col-md-2 text-center">
                <div class="row">
                <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" onclick="uncover ('nube')">
                </div>
-               <div a class="row nav-link text-white" onclick="uncover ('nube')"> <p>HyperCX Cloud</p></a></div>
+               <div a class="row nav-link text-white" onclick="uncover ('nube')"> <p>HyperCX Cloud</p></div>
             </div>
             <div class="col-2 col-md-2 text-center">
                 <div class="row">
-                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR">
-                    <div class="row"> <a href="https://virtalus.com/hypercx-bento/"><p></p>HyperCX Backup y DR</p></a></div>
+                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" onclick="uncover ('desas')">
+                    <div class="row nav-link text-white" onclick="uncover ('desas')"> <p>HyperCX Backup y DR</p></div>
                 </div>
             </div>
             <div class="col-2 col-md-2 text-center">
                 <div class="row">
-                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV">
-                    <div class="row"> <a href="https://virtalus.com/hypercx-bento/"><p>Virtualización de Red</p></a></div>
+                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" onclick="uncover ('vred')">
+                    <div class="row nav-link text-white" onclick="uncover ('vred')"><p>Virtualización de Red</p></div>
                 </div>
             </div>
             <div class="col-3 text-center d-md-block d-none">
@@ -218,6 +219,22 @@
         </div>
     </div>
     
+    <div class="row men text-center" id="desas" style="display: none" style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
+        <div class="col-12">
+            <h1>HyperCX Backup & DR</h1><br>
+            <p>La nube de HyperCX es una solución de nube híbrida que combina la simplicidad de la nube pública con la seguridad y el control de la nube privada.</p>
+            
+        </div>
+    </div>
+
+    <div class="row men text-center" id="vred" style="display: none" style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
+        <div class="col-12">
+            <h1>Virtualización de Red</h1><br>
+            <p>La nube de HyperCX es una solución de nube híbrida que combina la simplicidad de la nube pública con la seguridad y el control de la nube privada.</p>
+            
+        </div>
+    </div>
+
     <footer>
         <p class="text-white">&copy; 2024 ExpertEaseMX Todos los derechos reservados.</p>
     </footer>
