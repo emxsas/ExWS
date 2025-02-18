@@ -190,42 +190,67 @@
 
     <div class="container-fluid row justify-content-center align-items-center background" style="height: 50vh; margin: 0; padding: 0; width: 100%;">
         <div class="p-3 mb-2 bg-light text-dark">
-        <div class="row"></div>
-        <div class="row men ini text-center">
-            <div class="col-2 d-md-block d-none">
-            </div>    
-            <div class="col-2 col-md-2 text-center">
-               <div class="row">
-               <img src="./Images/Scale.png" class="img-fluid" alt="Esca">
-               </div>
-               <div a class="row nav-link" > <h5 class="elementor-image-box-title">Escalabilidad</h5></div>
-               <p class="elementor-image-box-description">Comienza solamente con los recursos que necesitas.</p>
-            </div>
-            <div class="col-2 col-md-2 text-center">
-                <div class="row">
-                    <img src="./Images/Self.png" class="img-fluid" alt="Sel">
-                    <div a class="row nav-link" > <h5 class="elementor-image-box-title">Self Service</h5></div><br>
-               <p class="elementor-image-box-description">Agreaga recusos de cómputo y storage casi instantaneamente.</p>
+            <div class="row"></div>
+            <div class="row men ini text-center">
+                <div class="col-2 d-md-block d-none"></div>
+                <div class="col-2 col-md-2 text-center">
+                    <div class="row">
+                        <img src="./Images/Scale.png" class="img-fluid" alt="Esca" style="width: 50%;">
+                    </div>
+                    <div class="row nav-link">
+                        <h6 class="elementor-image-box-title">Escalabilidad</h6>
+                    </div>
+                    <p class="elementor-image-box-description">Comienza unicamente con los recursos que necesitas.</p>
                 </div>
-            </div>
-            <div class="col-2 col-md-2 text-center">
-                <div class="row">
-                    <img src="./Images/Mngmt.png" class="img-fluid" alt="mngnt">
-                    <div a class="row nav-link" > <h5 class="elementor-image-box-title">Fácil Administración</h5></div><br>
-               <p class="elementor-image-box-description">Excelentes controles para administrar tu infraestructura de acuerdo a tus necesidades.</p>
+                <div class="col-2 col-md-2 text-center">
+                    <div class="row">
+                        <img src="./Images/Self.png" class="img-fluid" alt="Sel" style="width: 50%;">
+                        <div class="row nav-link">
+                            <h6 class="elementor-image-box-title">Self Service</h6>
+                        </div>
+                        <p class="elementor-image-box-description">Agrega recursos de cómputo y storage casi instantáneamente.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-2 col-md-2 text-center">
-                <div class="row">
-                    <img src="./Images/Cust.png" class="img-fluid" alt="mngnt">
-                    <div a class="row nav-link" > <h5 class="elementor-image-box-title">Personalizable</h5></div><br>
-               <p class="elementor-image-box-description">Adaptable a las necesidades y objetivos de su negocio.</p>
+                <div class="col-2 col-md-2 text-center">
+                    <div class="row">
+                        <img src="./Images/Mngmt.png" class="img-fluid" alt="mngnt" style="width: 50%;">
+                        <div class="row nav-link">
+                            <h6 class="elementor-image-box-title">Fácil Administración</h6>
+                        </div>
+                        <p class="elementor-image-box-description">Excelentes controles de administración para tu infraestructura.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-2 text-center d-md-block d-none">
+                <div class="col-2 col-md-2 text-center">
+                    <div class="row">
+                        <img src="./Images/Cust.png" class="img-fluid" alt="mngnt" style="width: 50%;">
+                        <div class="row nav-link">
+                            <h6 class="elementor-image-box-title">Personalizable</h6>
+                        </div>
+                        <p class="elementor-image-box-description">Adaptable a las necesidades y objetivos de su negocio.</p>
+                    </div>
+                </div>
+                <div class="col-2 text-center d-md-block d-none"></div>
             </div>
         </div>
     </div>
+    <style>
+        @media (max-width: 768px) {
+            .elementor-image-box-title {
+                font-size: 1rem;
+            }
+            .elementor-image-box-description {
+                font-size: 0.8rem;  
+            }
+        }
+        @media (max-width: 576px) {
+            .elementor-image-box-title {
+                font-size: 0.8rem;
+            }
+            .elementor-image-box-description {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
   
         <div class="row men" id="sobN" style="display: none;">
                 <div class="col-12">
