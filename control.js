@@ -27,6 +27,11 @@ function inicio(){
         item.style.display = 'flex';
     });
 }
+function repositionDiv(section) {
+    const cloudNavDiv = document.getElementById('cloudNav');
+    cloudNavDiv.style.display = 'block';
+    uncover(section); // Call the existing uncover function
+}
 
 function contForm(){
     hideMen();

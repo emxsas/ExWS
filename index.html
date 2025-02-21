@@ -55,6 +55,7 @@
                 font-size: 0.5rem;
             }
         }
+        
     </style>
 </head>
 
@@ -94,6 +95,34 @@
                 </div>
             </div>
         </header>
+    <div class="ini row" id="cloudNav" >
+        <div class="row text-center text-white">
+            <h6>Soluciones de Nube</h6>
+            <div class="col-3 d-md-block d-none">
+            </div>    
+            <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('nube')">
+               
+               <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 20%;">
+              
+                <p>HyperCX Cloud</p>
+            </div>
+            <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('desas')">
+                
+                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 20%;">
+                    <p>HyperCX Backup y DR</p>
+                
+            </div>
+            <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('vred')">
+               
+                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 20%;">
+                    <p>Virtualización de Red</p>
+                
+            </div>
+            <div class="col-3 text-center d-md-block d-none">
+            </div>
+        </div>
+    </div>   
+
    <div class="container-fluid" style="background: #4d4d4d;">
     <div class="row men ini" style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
         <!--<div class="col-2 d-md-block d-none"></div>-->
@@ -150,8 +179,8 @@
         
     </div>
 
-    <div class=" men ini container-fluid row justify-content-center align-items-center" style="height: 40vh; margin: 0; padding: 0; width: 100%;">
-        <div class="row"></div>
+    <div id="solsdiv" class="ini men container-fluid row justify-content-center align-items-center" style="height: 40vh; margin: 0; padding: 0; width: 100%;">
+        
         <div class="row text-center text-white">
             <H1>Soluciones de Nube</H1>
             <div class="col-3 d-md-block d-none">
@@ -160,33 +189,25 @@
                <div class="row">
                <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 80%;" onclick="uncover ('nube')">
                </div>
-               <div a class="row nav-link text-white" onclick="uncover ('nube')"> <p>HyperCX Cloud</p></div>
+               <div a class="row nav-link text-white" onclick="repositionDiv('nube')"> <p>HyperCX Cloud</p></div>
             </div>
             <div class="col-4 col-md-2 text-center">
                 <div class="row">
                     <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 80%;" onclick="uncover ('desas')">
-                    <div class="row nav-link text-white" onclick="uncover ('desas')"> <p>HyperCX Backup y DR</p></div>
+                    <div class="row nav-link text-white" onclick="repositionDiv('desas')"> <p>HyperCX Backup y DR</p></div>
                 </div>
             </div>
             <div class="col-4 col-md-2 text-center">
                 <div class="row">
                     <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 80%;" onclick="uncover ('vred')">
-                    <div class="row nav-link text-white" onclick="uncover ('vred')"><p>Virtualización de Red</p></div>
+                    <div class="row nav-link text-white" onclick="repositionDiv('vred')"><p>Virtualización de Red</p></div>
                 </div>
             </div>
             <div class="col-3 text-center d-md-block d-none">
             </div>
         </div>
-        <style>
-            .row > .col-2 {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 100%;
-            }
-        </style>
     </div>
-    
+
     <div class="men ini container-fluid row justify-content-center align-items-center background" style="height: 40vh; margin: 0; padding: 0; width: 100%;">
         <div class="p-3 mb-2 bg-light text-dark">
             <div class="row"></div>
@@ -397,19 +418,23 @@
                         <input type="text" placeholder="Nombre" id="nombre" class="form-control" required="true">
                         <label for="nombre">Nombre:</label>
                     </div>
+                    <br>
                     <div class="row form-floating">    
                         <input type="text" placeholder="Telefono" id="telefono" class="form-control" required="true">
                         <label for="telefono">Telefono:</label>
                     </div>
+                    <br>
                     <div class="row form-floating">    
                         <input type="email" placeholder="Email" id="email" class="form-control" required="true">
                         <label for="email">Email:</label>
                     </div>
+                    <br>
                     <div class="row form-floating">    
                         
                         <textarea placeholder="Request" id="req" class="form-control" required="true" rows="4" style="height: 125px;"></textarea>
                         <label for="req">Solicitud:</label>
                     </div>
+                    <br>
                     <div class="row form-floating">    
                         <button class="btn btn-primary" id="ctcFormbtn">Guardar</button>
                     </div>
