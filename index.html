@@ -81,7 +81,17 @@
                                     <a class="nav-link text-white" onclick="inicio()">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" onclick="uncover('serv')">Servicios</a>
+                                    <div class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Servicios
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" onclick="repositionDiv('nube')">Nube</a></li>
+                                            <li><a class="dropdown-item" onclick="uncover('serv')">Desarrollo de Software</a></li>
+                                            <li><a class="dropdown-item" onclick="uncover('serv')">DevOps as a Service</a></li>
+                                            <li><a class="dropdown-item" onclick="uncover('serv')">Consultoría Tecnológica</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" onclick="uncover('sobN')">Sobre Nosotros</a>
@@ -94,35 +104,35 @@
                     </nav>
                 </div>
             </div>
+            
         </header>
-    <div class="ini row" id="cloudNav" >
-        <div class="row text-center text-white">
-            <h6>Soluciones de Nube</h6>
-            <div class="col-3 d-md-block d-none">
-            </div>    
-            <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('nube')">
-               
-               <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 20%;">
-              
-                <p>HyperCX Cloud</p>
+      
+        <div class="row" id="cloudNav" style="display: none;">
+            <div class="row text-center text-white">
+                <div class="col-3 d-md-block d-none">
+                </div>    
+                <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('nube')" style="cursor: pointer;">
+                   
+                   <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 20%;">
+                  
+                    <p>HyperCX Cloud</p>
+                </div>
+                <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('desas')" style="cursor: pointer;">
+                    
+                        <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 20%;">
+                        <p>HyperCX Backup y DR</p>
+                    
+                </div>
+                <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('vred')" style="cursor: pointer;">
+                   
+                        <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 20%;">
+                        <p>Virtualización de Red</p>
+                    
+                </div>
+                <div class="col-3 text-center d-md-block d-none">
+                </div>
             </div>
-            <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('desas')">
-                
-                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 20%;">
-                    <p>HyperCX Backup y DR</p>
-                
-            </div>
-            <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('vred')">
-               
-                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 20%;">
-                    <p>Virtualización de Red</p>
-                
-            </div>
-            <div class="col-3 text-center d-md-block d-none">
-            </div>
-        </div>
-    </div>   
-
+        </div> 
    <div class="container-fluid" style="background: #4d4d4d;">
     <div class="row men ini" style="background-image: url('./Images/techBKG.jpg'); background-attachment: fixed;">
         <!--<div class="col-2 d-md-block d-none"></div>-->
@@ -185,22 +195,22 @@
             <H1>Soluciones de Nube</H1>
             <div class="col-3 d-md-block d-none">
             </div>    
-            <div class="col-4 col-md-2 text-center">
-               <div class="row">
-               <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 80%;" onclick="uncover ('nube')">
+            <div class="col-4 col-md-2 text-center" onclick="repositionDiv('nube')" style="cursor: pointer;">
+               <div class="row"  >
+               <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 80%;">
                </div>
-               <div a class="row nav-link text-white" onclick="repositionDiv('nube')"> <p>HyperCX Cloud</p></div>
+               <div a class="row nav-link text-white"> <p>HyperCX Cloud</p></div>
             </div>
-            <div class="col-4 col-md-2 text-center">
-                <div class="row">
-                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 80%;" onclick="uncover ('desas')">
-                    <div class="row nav-link text-white" onclick="repositionDiv('desas')"> <p>HyperCX Backup y DR</p></div>
+            <div class="col-4 col-md-2 text-center" onclick="repositionDiv('desas')" style="cursor: pointer;">
+                <div class="row" >
+                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 80%;">
+                    <div class="row nav-link text-white" > <p>HyperCX Backup y DR</p></div>
                 </div>
             </div>
-            <div class="col-4 col-md-2 text-center">
+            <div class="col-4 col-md-2 text-center" onclick="repositionDiv('vred')" style="cursor: pointer;">
                 <div class="row">
-                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 80%;" onclick="uncover ('vred')">
-                    <div class="row nav-link text-white" onclick="repositionDiv('vred')"><p>Virtualización de Red</p></div>
+                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 80%;">
+                    <div class="row nav-link text-white" ><p>Virtualización de Red</p></div>
                 </div>
             </div>
             <div class="col-3 text-center d-md-block d-none">

@@ -1,7 +1,7 @@
-function uncover(divId){
+function uncover(divId,clN){
     console.log(divId);
     
-    hideMen();
+    hideMen(clN);
     const element = document.getElementById(divId);
     element.style.display = 'block';
     element.style.color = '#FFFFFF';
@@ -9,28 +9,36 @@ function uncover(divId){
     
 }
 
-function hideMen(){
+function hideMen(clM){
 
     const resto= document.querySelectorAll('.men');
-    console.log(resto);
+    
     resto.forEach(function(resto){
-        resto.style.display = 'none';
+        if(clM==true && resto.id == 'cloudNav'){
+            console.log('cloudMen',clM,'r',resto.id);
+       
+        }else{
+            resto.style.display = 'none';
+        }
     });
 
 }
 
 function inicio(){
-    hideMen();
+    hideMen();  
     const resto= document.querySelectorAll('.ini')
-    console.log(resto);
     resto.forEach((item) => {
         item.style.display = 'flex';
     });
 }
 function repositionDiv(section) {
+    console.log('section',section);
     const cloudNavDiv = document.getElementById('cloudNav');
-    cloudNavDiv.style.display = 'block';
-    uncover(section); // Call the existing uncover function
+    console.log('cloudNavDiv',cloudNavDiv);
+
+        cloudNavDiv.style.display = 'block';
+
+    uncover(section,true); // Call the existing uncover function
 }
 
 function contForm(){
