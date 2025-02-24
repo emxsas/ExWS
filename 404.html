@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Extract the path from the URL
+        const path = window.location.pathname.substring(1);
+        // Redirect to the main page with the path as a query parameter
+        window.location.replace(`/?section=${path}`);
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
