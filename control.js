@@ -111,9 +111,10 @@ window.addEventListener('popstate', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname.substring(1);
-    if (path) {
-        uncover(path);
+    const urlParams = new URLSearchParams(window.location.search);
+    const section = urlParams.get('section');
+    if (section) {
+        uncover(section);
     } else {
         inicio(); // Default section
     }
