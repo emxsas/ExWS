@@ -5,8 +5,13 @@ function uncover(divId,clN){
     const element = document.getElementById(divId);
     element.style.display = 'block';
     element.style.color = '#FFFFFF';
-    toastr.success('Uncovered!', 'Success');
-    
+    //toastr.success('Uncovered!', 'Success');
+
+     // Update the URL without reloading the page
+     history.pushState({ section: divId }, '', `/${divId}`);
+     if(divId=='contactform'){
+        contForm();
+     }
 }
 
 function hideMen(clM){
@@ -42,9 +47,6 @@ function repositionDiv(section) {
 }
 
 function contForm(){
-    hideMen();
-    document.getElementById('contactform').style.display = 'block';
-    const form = document.getElementById('form');
     const btn = document.getElementById('ctcFormbtn');
 
     btn.addEventListener('click', (event) => {
@@ -97,3 +99,22 @@ function contact(data) {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }
+
+// Handle back and forward navigation
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.section) {
+        hideMen();
+        const element = document.getElementById(event.state.section);
+        element.style.display = 'block';
+        element.style.color = '#FFFFFF';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.substring(1);
+    if (path) {
+        uncover(path);
+    } else {
+        inicio(); // Default section
+    }
+});

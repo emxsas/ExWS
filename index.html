@@ -55,7 +55,7 @@
                 font-size: 0.5rem;
             }
         }
-        
+      
     </style>
 </head>
 
@@ -66,7 +66,7 @@
                 <div class="d-flex justify-content-center">
                     <nav class="navbar navbar-expand-lg" style="background: #4d4d4d; width: 90%;">
                         <nav class="navbar">
-                            <a class="navbar-brand" href="#">
+                            <a class="navbar-brand" href="/">
                                 <img src="./Images/LogonoBKG.png" width="160" height="130" onclick="inicio()">
                             </a>
                         </nav>
@@ -88,7 +88,7 @@
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><a class="dropdown-item" onclick="repositionDiv('nube')">Nube</a></li>
                                             <li><a class="dropdown-item" onclick="uncover('serv')">Desarrollo de Software</a></li>
-                                            <li><a class="dropdown-item" onclick="uncover('devOps')">DevOps as a Service</a></li>
+                                            <li><a class="dropdown-item" onclick="repositionDiv('devOps')">DevOps as a Service</a></li>
                                             <li><a class="dropdown-item" onclick="uncover('serv')">Consultoría Tecnológica</a></li>
                                         </ul>
                                     </div>
@@ -109,27 +109,33 @@
       
         <div class="row men" id="cloudNav" style="display: none;">
             <div class="row text-center text-white">
-                <div class="col-3 d-md-block d-none">
+                <div class="col-2 d-md-block d-none">
                 </div>    
-                <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('nube')" style="cursor: pointer;">
+                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('nube')" style="cursor: pointer;">
                    
                    <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 20%;">
                   
                     <p>HyperCX Cloud</p>
                 </div>
-                <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('desas')" style="cursor: pointer;">
+                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('desas')" style="cursor: pointer;">
                     
                         <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 20%;">
                         <p>HyperCX Backup y DR</p>
                     
                 </div>
-                <div class="col-4 col-md-2 text-center text-white" onclick="repositionDiv('vred')" style="cursor: pointer;">
+                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('vred')" style="cursor: pointer;">
                    
                         <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 20%;">
                         <p>Virtualización de Red</p>
                     
                 </div>
-                <div class="col-3 text-center d-md-block d-none">
+                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('devOps')" style="cursor: pointer;">
+                   
+                    <img src="./Images/devopscloud.png" class="img-fluid" alt="DevOps" style="width: 20%;">
+                    <p>DevOps</p>
+                
+            </div>
+                <div class="col-2 text-center d-md-block d-none">
                 </div>
             </div>
         </div> 
@@ -193,27 +199,33 @@
         
         <div class="row text-center text-white">
             <H1>Soluciones de Nube</H1>
-            <div class="col-3 d-md-block d-none">
+            <div class="col-2 d-md-block d-none">
             </div>    
-            <div class="col-4 col-md-2 text-center" onclick="repositionDiv('nube')" style="cursor: pointer;">
+            <div class="col-3 col-md-2 text-center" onclick="repositionDiv('nube')" style="cursor: pointer;">
                <div class="row"  >
                <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX" style="width: 80%;">
                </div>
                <div a class="row nav-link text-white"> <p>HyperCX Cloud</p></div>
             </div>
-            <div class="col-4 col-md-2 text-center" onclick="repositionDiv('desas')" style="cursor: pointer;">
+            <div class="col-3 col-md-2 text-center" onclick="repositionDiv('desas')" style="cursor: pointer;">
                 <div class="row" >
                     <img src="./Images/sol-dr.png" class="img-fluid" alt="DR" style="width: 80%;">
                     <div class="row nav-link text-white" > <p>HyperCX Backup y DR</p></div>
                 </div>
             </div>
-            <div class="col-4 col-md-2 text-center" onclick="repositionDiv('vred')" style="cursor: pointer;">
+            <div class="col-3 col-md-2 text-center" onclick="repositionDiv('vred')" style="cursor: pointer;">
                 <div class="row">
                     <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV" style="width: 80%;">
                     <div class="row nav-link text-white" ><p>Virtualización de Red</p></div>
                 </div>
             </div>
-            <div class="col-3 text-center d-md-block d-none">
+            <div class="col-3 col-md-2 text-center" onclick="repositionDiv('devOps')" style="cursor: pointer;">
+                <div class="row">
+                    <img src="./Images/devopscloud.png" class="img-fluid" alt="DevOps" style="width: 80%;">
+                    <div class="row nav-link text-white" ><p>DevOps</p></div>
+                </div>
+            </div>
+            <div class="col-2 text-center d-md-block d-none">
             </div>
         </div>
     </div>
@@ -743,34 +755,46 @@
         </div>
      <div class="row">
         <div class="col-12">
-            <h4 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); margin-bottom: 20px;" ><br><br>Preocupate por desarrollar nosotros hacemos el ambiente</h4>
+            <h4 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); margin-bottom: 20px;" ><br><br>Tu código merece un despliegue sin estrés. Deja que nuestros expertos en DevOps hagan la magia.</h4>
     
         </div>
     </div>    
   
-     <div class="row"><br><br></div>
+     <div class="row d-none"><br><br></div>
      <div class="row">
+        
+        <div class="col-12 col-md-none text-center d-flex justify-content-center align-items-center">
+            <img src="./Images/cloud k8s.jpeg" style="width: 60%; border-radius: 15px;" class="img-fluid d-md-none" />
+        </div>
         <div class="col-2 d-md-block d-none"></div>
-        <div class="col-12 col-md-4" style="background-color: rgba(141, 140, 140, 0.568); padding: 20px; border-radius: 10px;">
-            <h3>1.- Acciones automaticas para deploy on commit</h3>
+        <div class="col-12 d-md-none"><br></div>
+        <div class="col-12 col-md-3 text-start" style="background-color: rgba(141, 140, 140, 0.568); padding: 20px; border-radius: 10px;">
+            <h4>1.- Despliegues Sin Esfuerzo: Automatización Directa con Cada Commit</h4>
             <ul>
-                <li>Expertease configura todo para que cada commit sea un deploy</li>
+                <li>GitHub Actions</li>
+                <li>Jenkins</li>
+                <li>GitLab CI/CD</li>
+                <li>CircleCI</li>
+                <li>Travis CI</li>
+                <li>Azure DevOps (Azure Pipelines)</li>
+                <li>AWS CodePipeline</li>
+                <li>Bamboo</li>
             </ul>
         </div>
-        <div class="col-12 col-md-1 d-md-block d-none"></div>
+        <div class="col-12 col-md-3 d-md-block d-none"> <img src="./Images/cloud k8s.jpeg" style="width: 100%; border-radius: 15px;" class="img-fluid d-md-block d-none" /></div>
         <div class="d-md-none" style="height: 20px;"></div>
-        <div class="col-12 col-md-4 text-start" style="background-color: rgba(141, 140, 140, 0.568); padding: 20px; border-radius: 10px;">
-            <h3>2.- Cualquier Ambiente</h3>
+        <div class="col-12 col-md-3 text-start" style="background-color: rgba(141, 140, 140, 0.568); padding: 20px; border-radius: 10px;">
+            <h4>2.- Tu Entorno Ideal, Sin Importar el Lenguaje</h4>
             <ul>
-            <li>Cualquier DB</li>
-            <li>Cualquier Back-end</li>
-            <li>Cualquier Fron-end</li>
-            <li>Cualquier Lenguaje</li>
-            <li>Cualquier Plataforma</li>
-            <li>VMs o Containers</li>
+                <li>Bases de Datos: MySQL, PostgreSQL, MongoDB, etc.</li>
+                <li>Lenguajes Back-end: Node.js, Python/Django, Java/Spring, etc.</li>
+                <li>Lenguajes Front-end: React, Angular, Vue.js, etc.</li>
+                <li>Lenguajes de Programación: Java, Python, JavaScript, Go, etc.</li>
+                <li>Plataformas: AWS, Azure, Google Cloud, On-Premise, etc.</li>
+                <li>Despliegue flexible: VMs o Containers.</li>
             </ul>
         </div>
-        <div class="col-2 d-md-block d-none"></div>
+        <div class="col-1 d-md-block d-none"></div>
      </div>
      <div class="row"><br><br></div>
     <!--////Agregar aqui imagenes de kubernetes containerrs vms jenkins github actions, 
