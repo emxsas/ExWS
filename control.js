@@ -1,8 +1,12 @@
 function uncover(divId,clN){
     console.log(divId);
-    
+    document.title = divId;
     hideMen(clN);
     const element = document.getElementById(divId);
+    if(!element){
+        inicio();
+        return;
+    }else{
     element.style.display = 'block';
     element.style.color = '#FFFFFF';
     //toastr.success('Uncovered!', 'Success');
@@ -12,6 +16,7 @@ function uncover(divId,clN){
      if(divId=='contactform'){
         contForm();
      }
+    }
 }
 
 function hideMen(clM){
@@ -35,6 +40,7 @@ function inicio(){
     resto.forEach((item) => {
         item.style.display = 'flex';
     });
+    history.pushState({ section: '' }, '', `/`);
 }
 function repositionDiv(section) {
     console.log('section',section);
