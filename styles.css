@@ -1,0 +1,333 @@
+/* Estilos generales */
+body {
+  background: #2c3e50; /* Un color oscuro que se ve profesional */
+  color: #ecf0f1; /* Texto claro para contraste */
+  font-family: "Inter", sans-serif; /* Fuente moderna y legible */
+}
+
+.hero-banner {
+  height: 50vh; /* Altura más imponente para el banner principal */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada para el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner h1.display-3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1.5px black;
+}
+
+.hero-banner h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+}
+
+/* Navbar personalizada */
+.navbar {
+  background: #34495e !important; /* Un tono un poco más claro que el fondo */
+  border-bottom: 3px solid #3498db; /* Una línea de acento */
+}
+
+.navbar-brand img {
+  width: 120px; /* Tamaño del logo ajustado */
+  height: auto;
+}
+
+.nav-link {
+  color: #ecf0f1 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db !important; /* Color de acento al pasar el ratón */
+}
+
+.dropdown-menu {
+  background-color: #34495e;
+  border: none;
+}
+
+.dropdown-item {
+  color: #ecf0f1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #3498db;
+  color: #2c3e50;
+}
+
+/* Estilos de las secciones de servicios (ini men) */
+.men {
+  padding: 40px 0; /* Más padding para separar secciones */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.men h1,
+.men h4 {
+  color: #3498db; /* Títulos en color de acento */
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.men p {
+  font-size: 1.1rem; /* Texto más grande para mejor legibilidad */
+  line-height: 1.6;
+  color: #ecf0f1;
+}
+
+/* Cards de información */
+.card {
+  background-color: rgba(44, 62, 80, 0.9); /* Fondo semitransparente oscuro */
+  border: 1px solid #3498db; /* Borde con color de acento */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para profundidad */
+  color: #ecf0f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto hover sutil */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-title {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.card-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-text ul li:before {
+  content: "• ";
+  color: #3498db;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+  font-weight: bold;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9; /* Tono más oscuro al pasar el ratón */
+  border-color: #2980b9;
+}
+
+/* Secciones con fondo de imagen */
+.background {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Superposición oscura para legibilidad */
+  background-blend-mode: darken;
+}
+
+/* Sección de Contacto */
+#contactform {
+  background-color: rgba(44, 62, 80, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+#contactform h2 {
+  color: #3498db;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#contactform p {
+  color: #ecf0f1;
+}
+
+.form-floating input,
+.form-floating textarea {
+  background-color: #34495e;
+  border: 1px solid #3498db;
+  color: #ecf0f1;
+  border-radius: 8px;
+}
+
+.form-floating label {
+  color: #bdc3c7;
+}
+
+.form-floating input:focus,
+.form-floating textarea:focus {
+  background-color: #34495e;
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25); /* Adjusted for blue */
+  color: #ecf0f1;
+}
+
+/* Footer */
+footer {
+  background: #34495e;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 3px solid #3498db;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  color: #ecf0f1;
+  font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-banner h1.display-3 {
+    font-size: 2.5rem;
+  }
+
+  .hero-banner h3 {
+    font-size: 1.2rem;
+  }
+
+  .men {
+    padding: 20px 0;
+  }
+
+  .men h1,
+  .men h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .men p {
+    font-size: 0.95rem;
+  }
+
+  .col-md-2.text-center img {
+    width: 60% !important; /* Ajuste para imágenes en móvil */
+  }
+
+  .elementor-image-box-title {
+    font-size: 1rem;
+  }
+
+  .elementor-image-box-description {
+    font-size: 0.8rem;
+  }
+
+  #contactform {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner h1.display-3 {
+    font-size: 2rem;
+  }
+
+  .hero-banner h3 {
+    font-size: 1rem;
+  }
+
+  .men h1,
+  .men h4 {
+    font-size: 1.5rem;
+  }
+
+  .elementor-image-box-title {
+    font-size: 0.9rem;
+  }
+
+  .elementor-image-box-description {
+    font-size: 0.7rem;
+  }
+}
+
+/* Estilos específicos para iconos y texto en la página principal (CloudNav) */
+#cloudNav .col-md-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#cloudNav .col-md-2 img {
+  width: 50% !important; /* Ajuste para iconos de navegación superior */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+#cloudNav .col-md-2 p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Estilos para la sección de ejemplos (Ejemplos apps) */
+.men.ini .col-md-2.text-center img {
+  width: 70% !important; /* Tamaño de las imágenes de ejemplo */
+  height: auto;
+}
+
+.men.ini .col-md-2.text-center p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Estilos para Chatbots */
+.chatbot-card {
+  background-color: rgba(44, 62, 80, 0.8);
+  border: 1px solid #3498db;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.chatbot-card:hover {
+  transform: translateY(-8px);
+}
+
+.chatbot-card .icon {
+  font-size: 3.5rem;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.chatbot-card h5 {
+  color: #ecf0f1;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.chatbot-card p {
+  color: #bdc3c7;
+  font-size: 0.95rem;
+}
