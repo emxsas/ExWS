@@ -1,58 +1,59 @@
-function uncover(divId,clN){
+function uncover(divId, clN) {
     console.log(divId);
     document.title = divId;
     hideMen(clN);
     const element = document.getElementById(divId);
-    if(!element){
+    if (!element) {
         inicio();
         return;
-    }else{
-    element.style.display = 'block';
-    element.style.color = '#FFFFFF';
-    //toastr.success('Uncovered!', 'Success');
+    } else {
+        element.style.display = 'block';
+        element.style.color = '#FFFFFF';
+        //toastr.success('Uncovered!', 'Success');
 
-     // Update the URL without reloading the page
-     history.pushState({ section: divId }, '', `/${divId}`);
-     if(divId=='contactform'){
-        contForm();
-     }
+        // Update the URL without reloading the page
+        history.pushState({ section: divId }, '', `/${divId}`);
+        if (divId == 'contactform') {
+            contForm();
+        }
     }
 }
 
-function hideMen(clM){
+function hideMen(clM) {
 
-    const resto= document.querySelectorAll('.men');
-    
-    resto.forEach(function(resto){
-        if(clM==true && resto.id == 'cloudNav'){
-            console.log('cloudMen',clM,'r',resto.id);
-       
-        }else{
+    const resto = document.querySelectorAll('.men');
+
+    resto.forEach(function(resto) {
+        if (clM == true && resto.id == 'cloudNav') {
+            console.log('cloudMen', clM, 'r', resto.id);
+
+        } else {
             resto.style.display = 'none';
         }
     });
 
 }
 
-function inicio(){
-    hideMen();  
-    const resto= document.querySelectorAll('.ini')
+function inicio() {
+    hideMen();
+    const resto = document.querySelectorAll('.ini')
     resto.forEach((item) => {
         item.style.display = 'flex';
     });
     history.pushState({ section: '' }, '', `/`);
 }
+
 function repositionDiv(section) {
-    console.log('section',section);
+    console.log('section', section);
     const cloudNavDiv = document.getElementById('cloudNav');
-    console.log('cloudNavDiv',cloudNavDiv);
+    console.log('cloudNavDiv', cloudNavDiv);
 
-        cloudNavDiv.style.display = 'block';
+    cloudNavDiv.style.display = 'block';
 
-    uncover(section,true); // Call the existing uncover function
+    uncover(section, true); // Call the existing uncover function
 }
 
-function contForm(){
+function contForm() {
     const btn = document.getElementById('ctcFormbtn');
 
     btn.addEventListener('click', (event) => {
@@ -61,28 +62,32 @@ function contForm(){
         const telefono = document.getElementById('telefono');
         const email = document.getElementById('email');
         const request = document.getElementById('req');
-        let valid=false;
-    
-    if(!nombre.value||!telefono.value||!email.value||!request.value){
-       
-    if(nombre.value==''){//agregar toasts a cada if
-     nombre.classList.add('is-invalid');
-toastr.error('El campo nombre no puede estar vacío','Corrija para continuar');
-    }else{nombre.classList.remove('is-invalid')} 
-    if(telefono.value==''){
-        telefono.classList.add('is-invalid');
-    toastr.error('El campo teléfono no puede estar vacío','Corrija para continuar');
-    }else{telefono.classList.remove('is-invalid')}
-    if(email.value==''){email.classList.add('is-invalid');
-toastr.error('El campo email no puede estar vacío','Corrija para continuar');
-    }else{email.classList.remove('is-invalid')}
-    if(request.value==''){request.classList.add('is-invalid');
-        toastr.error('El campo Solicitud no puede estar vacío','Corrija para continuar');
-    }else{request.classList.remove('is-invalid')}
-    valid=true;}else{valid=false;}
-    if(valid){return;}else{
-        const data = gaDat();
-        contact(data);}
+        let valid = false;
+
+        if (!nombre.value || !telefono.value || !email.value || !request.value) {
+
+            if (nombre.value == '') { //agregar toasts a cada if
+                nombre.classList.add('is-invalid');
+                toastr.error('El campo nombre no puede estar vacío', 'Corrija para continuar');
+            } else { nombre.classList.remove('is-invalid') }
+            if (telefono.value == '') {
+                telefono.classList.add('is-invalid');
+                toastr.error('El campo teléfono no puede estar vacío', 'Corrija para continuar');
+            } else { telefono.classList.remove('is-invalid') }
+            if (email.value == '') {
+                email.classList.add('is-invalid');
+                toastr.error('El campo email no puede estar vacío', 'Corrija para continuar');
+            } else { email.classList.remove('is-invalid') }
+            if (request.value == '') {
+                request.classList.add('is-invalid');
+                toastr.error('El campo Solicitud no puede estar vacío', 'Corrija para continuar');
+            } else { request.classList.remove('is-invalid') }
+            valid = true;
+        } else { valid = false; }
+        if (valid) { return; } else {
+            const data = gaDat();
+            contact(data);
+        }
     });
 
 }
@@ -92,7 +97,7 @@ const gaDat = () => {
     const telefono = document.getElementById('telefono');
     const email = document.getElementById('email');
     const request = document.getElementById('req');
-    
+
     const data = `Nombre: ${nombre.value} tel:${telefono.value} email:${email.value} req:${request.value}`;
     return data;
 }
@@ -101,7 +106,7 @@ const gaDat = () => {
 function contact(data) {
     const phoneNumber = '7222450592';
     const message = encodeURIComponent(data);
-    console.log('message',message);
+    console.log('message', message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }

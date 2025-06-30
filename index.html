@@ -50,10 +50,14 @@
             background-size: cover;
             background-position: center;
             color: white;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada para el texto */
+            /* Aumento la opacidad de la sombra para mejor legibilidad */
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); /* Sombra más pronunciada para el texto */
             display: flex;
             align-items: center;
             justify-content: center;
+            /* Aumento la opacidad de la capa oscura para mejor legibilidad */
+            background-color: rgba(0, 0, 0, 0.7); /* Superposición oscura para legibilidad */
+            background-blend-mode: darken;
         }
 
         .hero-banner h1.display-3 {
@@ -177,8 +181,8 @@
             background-size: cover;
             background-position: center;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            background-color: rgba(0, 0, 0, 0.5); /* Superposición oscura para legibilidad */
+            /* Aumento la opacidad de la capa oscura para mejor legibilidad */
+            background-color: rgba(0, 0, 0, 0.7); /* Superposición oscura para legibilidad */
             background-blend-mode: darken;
         }
 
@@ -331,8 +335,8 @@
             margin-top: 10px;
         }
 
-        /* Estilos para Chatbots */
-        .chatbot-card {
+        /* Estilos para Chatbots y Cards de Beneficios */
+        .chatbot-card, .service-card-home .card {
             background-color: rgba(44, 62, 80, 0.8);
             border: 1px solid #3498db;
             border-radius: 15px;
@@ -341,27 +345,59 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             text-align: center;
             transition: transform 0.3s ease;
+            height: 100%; /* Asegura que todas las tarjetas en una fila tengan la misma altura */
+            display: flex; /* Para flexbox dentro de la tarjeta */
+            flex-direction: column; /* Apila el contenido verticalmente */
+            justify-content: flex-start; /* Alinea el contenido al inicio */
         }
 
-        .chatbot-card:hover {
+        .chatbot-card:hover, .service-card-home .card:hover {
             transform: translateY(-8px);
         }
 
-        .chatbot-card .icon {
+        .chatbot-card .icon, .service-card-home .card .icon {
             font-size: 3.5rem;
             color: #3498db;
             margin-bottom: 15px;
         }
 
-        .chatbot-card h5 {
+        .chatbot-card h5, .service-card-home .card h5 {
             color: #ecf0f1;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        .chatbot-card p {
+        .chatbot-card p, .service-card-home .card p {
             color: #bdc3c7;
             font-size: 0.95rem;
+        }
+
+        /* Estilos para las listas en las secciones de detalle (ej. Nube, DR, DevOps) */
+        .men ul {
+            list-style: none; /* Quita los bullets por defecto */
+            padding-left: 0; /* Asegura que la lista no tenga padding izquierdo */
+        }
+
+        .men ul li {
+            position: relative;
+            padding-left: 1.5em; /* Espacio para el icono personalizado */
+            margin-bottom: 0.5em;
+        }
+
+        .men ul li .fas {
+            position: absolute;
+            left: 0;
+            top: 0.2em; /* Ajusta la posición vertical del icono */
+            color: #3498db; /* Color del icono */
+        }
+
+        /* Asegurar que las imágenes dentro de las tarjetas no se desborden y se centren */
+        .card img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Elimina espacio extra debajo de la imagen */
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -530,7 +566,7 @@
 
     <!-- Sección "Por Qué Elegirnos" - Enfoque en Portafolio/Beneficios -->
     <div class="men ini container-fluid row justify-content-center align-items-center background"
-        style="background-image: url('./Images/why-us-bg.jpg'); background-color: rgba(0, 0, 0, 0.4); background-blend-mode: darken;">
+        style="background-image: url('./Images/why-us-bg.jpg');">
         <div class="row text-center text-white mb-4">
             <h1>¿Por Qué Elegir ExpertEaseMX?</h1>
             <p class="lead" style="color: #bdc3c7;">
@@ -649,8 +685,7 @@
                     <div id="cloudMainCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/cloud.jpg'); background-color: rgba(0, 0, 0, 0.5); 
-                                  background-blend-mode: darken;">
+                                <div class="hero-banner" style="background-image: url('./Images/cloud.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Soluciones en la Nube</h1>
                                         <h3>Desempeño Superior, Seguridad Robusta, Ahorro Inteligente: Tu Infraestructura Simplificada.</h3>
@@ -894,7 +929,7 @@
             <!-- SECCIÓN DE CHATBOTS INTELIGENTES -->
             <div class="row men" id="chatbots" style="display: none;">
                 <div class="col-12">
-                    <div class="hero-banner" style="background-image: url('./Images/chatbot-banner.jpg'); background-color: rgba(0, 0, 0, 0.6); background-blend-mode: darken;">
+                    <div class="hero-banner" style="background-image: url('./Images/chatbot-banner.jpg');">
                         <div class="col text-center">
                             <h1 class="display-3">Chatbots Inteligentes</h1>
                             <h3>Automatiza la atención al cliente, personaliza experiencias y optimiza operaciones con IA conversacional.</h3>
@@ -1028,8 +1063,7 @@
                     <div id="drCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/dstrycomp.jpg'); background-color: rgba(0, 0, 0, 0.5); 
-                                  background-blend-mode: darken;">
+                                <div class="hero-banner" style="background-image: url('./Images/dstrycomp.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Backup & Recuperación de Desastres (DR)</h1>
                                         <h3>¿Pérdida de datos? ¡Imposible con nuestra solución! Respaldo seguro y simple en la nube.</h3>
@@ -1069,10 +1103,10 @@
                         <h4 class="mb-4 text-center">¿Por qué optar por nuestra solución de DR?</h4>
                         <div class="col-lg-8">
                             <ul style="color: #ecf0f1; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color: #3498db;"></i> El respaldo delta solo realiza un seguimiento de los cambios actuales, en lugar de congestionar la red con datos irrelevantes y redundantes, optimizando tus recursos.</li>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color: #3498db;"></i> Medidas preventivas que te ahorran disgustos innecesarios en momentos de falsas alarmas, con recuperaciones en minutos.</li>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color: #3498db;"></i> Centros de datos remotos alrededor del mundo para proteger tus datos sin importar qué, garantizando la máxima disponibilidad.</li>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color: #3498db;"></i> Plataforma fácil de usar para configurar el proceso de replicación desde la comodidad de tu navegador, eliminando la complejidad.</li>
+                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> El respaldo delta solo realiza un seguimiento de los cambios actuales, en lugar de congestionar la red con datos irrelevantes y redundantes, optimizando tus recursos.</li>
+                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Medidas preventivas que te ahorran disgustos innecesarios en momentos de falsas alarmas, con recuperaciones en minutos.</li>
+                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Centros de datos remotos alrededor del mundo para proteger tus datos sin importar qué, garantizando la máxima disponibilidad.</li>
+                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Plataforma fácil de usar para configurar el proceso de replicación desde la comodidad de tu navegador, eliminando la complejidad.</li>
                             </ul>
                         </div>
                     </div>
@@ -1089,8 +1123,7 @@
                     <div id="nfvCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/netvirt.png'); background-color: rgba(0, 0, 0, 0.5); 
-                                  background-blend-mode: darken;">
+                                <div class="hero-banner" style="background-image: url('./Images/netvirt.png');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Virtualización de Red (NFV)</h1>
                                         <h3>Transforma tu infraestructura de red. Agilidad, flexibilidad y eficiencia sin precedentes.</h3>
@@ -1138,14 +1171,14 @@
                         <h4 class="mb-4 text-center">Funcionalidades Avanzadas</h4>
                         <div class="col-lg-8">
                             <ul style="color: #ecf0f1; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-                                <li class="mb-2"><i class="fas fa-network-wired me-2" style="color: #3498db;"></i> Soporte de alta disponibilidad utilizando el protocolo VRRP a través de keepalived, garantizando la continuidad.</li>
-                                <li class="mb-2"><i class="fas fa-route me-2" style="color: #3498db;"></i> Enrutamiento avanzado entre redes virtuales conectadas para una gestión de tráfico óptima.</li>
-                                <li class="mb-2"><i class="fas fa-lock me-2" style="color: #3498db;"></i> VPN de cliente utilizando OpenVPN para conexiones seguras y cifradas.</li>
-                                <li class="mb-2"><i class="fas fa-sitemap me-2" style="color: #3498db;"></i> Soporte de subneteo para redes privadas, ofreciendo granularidad y control.</li>
-                                <li class="mb-2"><i class="fas fa-balance-scale-left me-2" style="color: #3498db;"></i> Funciones de balanceo de cargas L4 (TCP/UDP) y L7 (HTTP, HTTPS) para distribuir el tráfico eficientemente.</li>
-                                <li class="mb-2"><i class="fas fa-globe-americas me-2" style="color: #3498db;"></i> Soporte de VPN de sitio a sitio (S2S) utilizando StrongSwan para interconexión segura de redes.</li>
-                                <li class="mb-2"><i class="fas fa-shield-alt me-2" style="color: #3498db;"></i> Protección DDoS integrada para salvaguardar tu infraestructura contra ataques.</li>
-                                <li class="mb-2"><i class="fas fa-wifi me-2" style="color: #3498db;"></i> Capacidades SD-WAN para optimizar el rendimiento de la red y reducir costos.</li>
+                                <li class="mb-2"><i class="fas fa-network-wired me-2"></i> Soporte de alta disponibilidad utilizando el protocolo VRRP a través de keepalived, garantizando la continuidad.</li>
+                                <li class="mb-2"><i class="fas fa-route me-2"></i> Enrutamiento avanzado entre redes virtuales conectadas para una gestión de tráfico óptima.</li>
+                                <li class="mb-2"><i class="fas fa-lock me-2"></i> VPN de cliente utilizando OpenVPN para conexiones seguras y cifradas.</li>
+                                <li class="mb-2"><i class="fas fa-sitemap me-2"></i> Soporte de subneteo para redes privadas, ofreciendo granularidad y control.</li>
+                                <li class="mb-2"><i class="fas fa-balance-scale-left me-2"></i> Funciones de balanceo de cargas L4 (TCP/UDP) y L7 (HTTP, HTTPS) para distribuir el tráfico eficientemente.</li>
+                                <li class="mb-2"><i class="fas fa-globe-americas me-2"></i> Soporte de VPN de sitio a sitio (S2S) utilizando StrongSwan para interconexión segura de redes.</li>
+                                <li class="mb-2"><i class="fas fa-shield-alt me-2"></i> Protección DDoS integrada para salvaguardar tu infraestructura contra ataques.</li>
+                                <li class="mb-2"><i class="fas fa-wifi me-2"></i> Capacidades SD-WAN para optimizar el rendimiento de la red y reducir costos.</li>
                             </ul>
                         </div>
                     </div>
@@ -1161,8 +1194,7 @@
                     <div id="devOpsCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/devops.jpg'); background-color: rgba(0, 0, 0, 0.5); 
-                                  background-blend-mode: darken;">
+                                <div class="hero-banner" style="background-image: url('./Images/devops.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">DevOps as a Service</h1>
                                         <h3>Tu código merece un despliegue sin estrés. Deja que nuestros expertos en DevOps hagan la magia.</h3>
@@ -1188,15 +1220,15 @@
                             <div class="card p-4 h-100 text-start">
                                 <h5 class="card-title"><i class="fas fa-cogs me-2"></i> 1.- Despliegues Sin Esfuerzo: Automatización Directa con Cada Commit</h5>
                                 <p>Implementamos pipelines de CI/CD robustas que automatizan la construcción, prueba y despliegue de tu código, reduciendo errores y acelerando tus entregas. Trabajamos con:</p>
-                                <ul style="color: #ecf0f1; list-style: none; padding: 0;">
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> GitHub Actions</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> Jenkins</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> GitLab CI/CD</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> CircleCI</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> Travis CI</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> Azure DevOps (Azure Pipelines)</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> AWS CodePipeline</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> Bamboo</li>
+                                <ul style="color: #ecf0f1; padding: 0;">
+                                    <li><i class="fas fa-check me-2"></i> GitHub Actions</li>
+                                    <li><i class="fas fa-check me-2"></i> Jenkins</li>
+                                    <li><i class="fas fa-check me-2"></i> GitLab CI/CD</li>
+                                    <li><i class="fas fa-check me-2"></i> CircleCI</li>
+                                    <li><i class="fas fa-check me-2"></i> Travis CI</li>
+                                    <li><i class="fas fa-check me-2"></i> Azure DevOps (Azure Pipelines)</li>
+                                    <li><i class="fas fa-check me-2"></i> AWS CodePipeline</li>
+                                    <li><i class="fas fa-check me-2"></i> Bamboo</li>
                                 </ul>
                             </div>
                         </div>
@@ -1204,12 +1236,12 @@
                             <div class="card p-4 h-100 text-start">
                                 <h5 class="card-title"><i class="fas fa-server me-2"></i> 2.- Tu Entorno Ideal, Sin Importar el Lenguaje o Plataforma</h5>
                                 <p>Configuramos y gestionamos entornos de desarrollo y producción optimizados para tus necesidades específicas, asegurando compatibilidad y rendimiento. Experiencia en:</p>
-                                <ul style="color: #ecf0f1; list-style: none; padding: 0;">
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> **Bases de Datos:** MySQL, PostgreSQL, MongoDB, SQL Server, etc.</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> **Lenguajes Back-end:** Node.js, Python/Django, Java/Spring, Go, PHP, .NET, etc.</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> **Lenguajes Front-end:** React, Angular, Vue.js, Svelte, etc.</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> **Plataformas:** AWS, Azure, Google Cloud, On-Premise, Kubernetes, Docker.</li>
-                                    <li><i class="fas fa-check me-2" style="color: #3498db;"></i> **Despliegue Flexible:** Máquinas Virtuales (VMs) o Contenedores (Docker, Kubernetes).</li>
+                                <ul style="color: #ecf0f1; padding: 0;">
+                                    <li><i class="fas fa-check me-2"></i> **Bases de Datos:** MySQL, PostgreSQL, MongoDB, SQL Server, etc.</li>
+                                    <li><i class="fas fa-check me-2"></i> **Lenguajes Back-end:** Node.js, Python/Django, Java/Spring, Go, PHP, .NET, etc.</li>
+                                    <li><i class="fas fa-check me-2"></i> **Lenguajes Front-end:** React, Angular, Vue.js, Svelte, etc.</li>
+                                    <li><i class="fas fa-check me-2"></i> **Plataformas:** AWS, Azure, Google Cloud, On-Premise, Kubernetes, Docker.</li>
+                                    <li><i class="fas fa-check me-2"></i> **Despliegue Flexible:** Máquinas Virtuales (VMs) o Contenedores (Docker, Kubernetes).</li>
                                 </ul>
                             </div>
                         </div>
@@ -1226,8 +1258,7 @@
                     <div id="consultoriaCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/consultoria-banner.jpg'); background-color: rgba(0, 0, 0, 0.6); 
-                                  background-blend-mode: darken;">
+                                <div class="hero-banner" style="background-image: url('./Images/consultoria-banner.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Consultoría Tecnológica Estratégica</h1>
                                         <h3>Navega el futuro con confianza. Expertos a tu lado para cada desafío digital.</h3>
@@ -1304,7 +1335,7 @@
                     <div id="sobNCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/cloud.jpeg'); background-color: rgba(0, 0, 0, 0.5); background-blend-mode: darken;">
+                                <div class="hero-banner" style="background-image: url('./Images/cloud.jpeg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Somos Expertos en Tecnología</h1>
                                         <h3>Tu socio estratégico en el camino hacia la innovación y el éxito.</h3>
