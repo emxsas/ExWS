@@ -45,19 +45,26 @@
             font-family: 'Inter', sans-serif; /* Fuente moderna y legible */
         }
 
-        .hero-banner {
-            height: 50vh; /* Altura más imponente para el banner principal */
+        /* La clase 'background' ahora maneja la superposición oscura para todas las imágenes de fondo */
+        .background {
+            background-attachment: fixed;
             background-size: cover;
             background-position: center;
             color: white;
-            /* Aumento la opacidad de la sombra para mejor legibilidad */
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); /* Sombra más pronunciada para el texto */
+            /* Aumento la opacidad de la capa oscura para mejor legibilidad y estandarización */
+            background-color: rgba(0, 0, 0, 0.85); /* Superposición oscura para legibilidad */
+            background-blend-mode: darken;
+        }
+
+        .hero-banner {
+            height: 50vh; /* Altura más imponente para el banner principal */
+            /* Las propiedades de background-size, background-position, background-color y background-blend-mode
+               ahora se gestionan a través de la clase 'background' aplicada en el HTML. */
+            color: white;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); /* Sombra pronunciada para el texto */
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Aumento la opacidad de la capa oscura para mejor legibilidad */
-            background-color: rgba(0, 0, 0, 0.7); /* Superposición oscura para legibilidad */
-            background-blend-mode: darken;
         }
 
         .hero-banner h1.display-3 {
@@ -173,17 +180,6 @@
         .btn-primary:hover {
             background-color: #2980b9; /* Tono más oscuro al pasar el ratón */
             border-color: #2980b9;
-        }
-
-        /* Secciones con fondo de imagen */
-        .background {
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            /* Aumento la opacidad de la capa oscura para mejor legibilidad */
-            background-color: rgba(0, 0, 0, 0.7); /* Superposición oscura para legibilidad */
-            background-blend-mode: darken;
         }
 
         /* Sección de Contacto */
@@ -639,7 +635,8 @@
                     <div id="cloudMainCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/cloud.jpg');">
+                                <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                                <div class="hero-banner background" style="background-image: url('./Images/cloud.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Soluciones en la Nube</h1>
                                         <h3>Desempeño Superior, Seguridad Robusta, Ahorro Inteligente: Tu Infraestructura Simplificada.</h3>
@@ -664,21 +661,21 @@
                         <h4 class="mb-4">Nuestra Solución IaaS: Sencillez y Potencia</h4>
                         <div class="col-md-4 mb-4">
                             <div class="chatbot-card h-100">
-                                <img src="./Images/contr.png" class="img-fluid mx-auto mb-3" alt="Control y Facilidad" style="width: 50%;">
+                                <img src="./Images/contr.png" class="img-fluid mx-auto mb-3" alt="Control y Facilidad" style="width: 35%;">
                                 <h5>Control y Facilidad de Implementación</h5>
                                 <p>Implementa y controla tus aplicaciones con facilidad, sin necesidad de ser un experto en tecnología.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="chatbot-card h-100">
-                                <img src="./Images/esca.png" class="img-fluid mx-auto mb-3" alt="Escalabilidad Flexible" style="width: 50%;">
+                                <img src="./Images/esca.png" class="img-fluid mx-auto mb-3" alt="Escalabilidad Flexible" style="width:35%;">
                                 <h5>Escalabilidad y Elasticidad</h5>
                                 <p>Escala tus recursos de forma flexible, adaptándote al crecimiento y las demandas fluctuantes de tu negocio.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="chatbot-card h-100">
-                                <img src="./Images/segu.png" class="img-fluid mx-auto mb-3" alt="Seguridad y Rendimiento" style="width: 50%;">
+                                <img src="./Images/segu.png" class="img-fluid mx-auto mb-3" alt="Seguridad y Rendimiento" style="width:35%;">
                                 <h5>Seguridad Robusta y Alto Rendimiento</h5>
                                 <p>Accede a una infraestructura segura y de alto rendimiento, sin las complicaciones ni la inversión de un centro de datos propio.</p>
                             </div>
@@ -767,7 +764,8 @@
             <!-- SECCIÓN DE DESARROLLO DE SOFTWARE COMO SERVICIO (SDaaS) -->
             <div class="row men" id="sedaas" style="display: none;">
                 <div class="col-12">
-                    <div class="hero-banner" style="background-image: url('./Images/appdev1.jpg');">
+                    <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                    <div class="hero-banner background" style="background-image: url('./Images/appdev1.jpg');">
                         <div class="col text-center">
                             <h1 class="display-3">Desarrollo de Software como Servicio (SDaaS)</h1>
                             <h3>Tu visión, hecha realidad. Software a medida, gestionado por expertos.</h3>
@@ -883,7 +881,8 @@
             <!-- SECCIÓN DE CHATBOTS INTELIGENTES -->
             <div class="row men" id="chatbots" style="display: none;">
                 <div class="col-12">
-                    <div class="hero-banner" style="background-image: url('./Images/bots.png');">
+                    <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                    <div class="hero-banner background" style="background-image: url('./Images/bots.png');">
                         <div class="col text-center">
                             <h1 class="display-3">Chatbots Inteligentes</h1>
                             <h3>Automatiza la atención al cliente, personaliza experiencias y optimiza operaciones con IA conversacional.</h3>
@@ -1017,7 +1016,8 @@
                     <div id="drCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/dstrycomp.jpg');">
+                                <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                                <div class="hero-banner background" style="background-image: url('./Images/dstrycomp.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Backup & Recuperación de Desastres (DR)</h1>
                                         <h3>¿Pérdida de datos? ¡Imposible con nuestra solución! Respaldo seguro y simple en la nube.</h3>
@@ -1077,7 +1077,8 @@
                     <div id="nfvCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/netvirt.png');">
+                                <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                                <div class="hero-banner background" style="background-image: url('./Images/netvirt.png');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Virtualización de Red (NFV)</h1>
                                         <h3>Transforma tu infraestructura de red. Agilidad, flexibilidad y eficiencia sin precedentes.</h3>
@@ -1148,7 +1149,8 @@
                     <div id="devOpsCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/devops.jpg');">
+                                <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                                <div class="hero-banner background" style="background-image: url('./Images/devops.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">DevOps as a Service</h1>
                                         <h3>Tu código merece una implementación sin estrés. Deja que nuestros expertos en DevOps hagan la magia.</h3>
@@ -1212,8 +1214,8 @@
                     <div id="consultoriaCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                               
-                                <div class="hero-banner" style="background-image: url('./Images/Consult.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-color: #f0f0f0;">
+                                <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                                <div class="hero-banner background" style="background-image: url('./Images/Consult.jpg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Consultoría Tecnológica Estratégica</h1>
                                         <h3>Navega el futuro con confianza. Expertos a tu lado para cada desafío digital.</h3>
@@ -1291,7 +1293,8 @@
                     <div id="sobNCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="hero-banner" style="background-image: url('./Images/cloud.jpeg');">
+                                <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
+                                <div class="hero-banner background" style="background-image: url('./Images/cloud.jpeg');">
                                     <div class="col text-center">
                                         <h1 class="display-3">Somos Expertos en Tecnología</h1>
                                         <h3>Tu socio estratégico en el camino hacia la innovación y el éxito.</h3>
