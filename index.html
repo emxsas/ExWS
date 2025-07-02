@@ -318,10 +318,17 @@
             padding: 10px;
         }
 
-        #cloudNav .col-md-2 img {
-            width: 50% !important; /* Ajuste para iconos de navegación superior */
-            height: auto;
+        #cloudNav .col-md-2 .icon-fa { /* Nueva clase para los iconos de Font Awesome */
+            font-size: 4rem; /* Aumentado a 4rem para un tamaño más prominente */
+            color: #3498db; /* Color del icono */
             margin-bottom: 5px;
+        }
+
+        /* Ajuste para pantallas pequeñas para los iconos de CloudNav */
+        @media (max-width: 576px) {
+            #cloudNav .col-md-2 .icon-fa {
+                font-size: 2.5rem; /* Reduce el tamaño en móviles */
+            }
         }
 
         #cloudNav .col-md-2 p {
@@ -475,27 +482,27 @@
         </header>
 
         <!-- Sección de navegación de la nube (visible en páginas de servicios de nube) -->
-        <div class="row men" id="cloudNav" style="display: none;">
-            <div class="row text-center text-white">
+        <div class="row men" id="cloudNav" style="display: none; padding: 0 !important;">
+            <div class="row text-center text-white" style="padding: 0 !important;">
                 <div class="col-2 d-md-block d-none"></div>
                 <div class="col-3 col-md-2 text-center" onclick="repositionDiv('nube')"
                     style="cursor: pointer;">
-                    <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX">
+                    <i class="fas fa-cloud icon-fa" alt="Cloud"></i> <!-- Icono para Cloud -->
                     <p>Cloud</p>
                 </div>
                 <div class="col-3 col-md-2 text-center" onclick="repositionDiv('desas')"
                     style="cursor: pointer;">
-                    <img src="./Images/sol-dr.png" class="img-fluid" alt="DR">
+                    <i class="fas fa-database icon-fa" alt="DR"></i> <!-- Icono para Backup y DR -->
                     <p>Backup y DR</p>
                 </div>
                 <div class="col-3 col-md-2 text-center" onclick="repositionDiv('vred')"
                     style="cursor: pointer;">
-                    <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV">
+                    <i class="fas fa-network-wired icon-fa" alt="NFV"></i> <!-- Icono para Virtualización de Red -->
                     <p>Virtualización de Red</p>
                 </div>
                 <div class="col-3 col-md-2 text-center" onclick="repositionDiv('devOps')"
                     style="cursor: pointer;">
-                    <img src="./Images/devopscloud.png" class="img-fluid" alt="DevOps">
+                    <i class="fas fa-cogs icon-fa" alt="DevOps"></i> <!-- Icono para DevOps -->
                     <p>DevOps</p>
                 </div>
                 <div class="col-2 text-center d-md-block d-none"></div>
@@ -655,7 +662,7 @@
 </div> <!-- Cierre del container-fluid principal -->
 
             <!-- /////// Cloud /////// -->
-            <div class="row men text-center" id="nube">
+            <div class="row men text-center" id="nube" style="padding: 0 !important;">
                 <div class="col-12">
                     <div id="cloudMainCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -686,21 +693,21 @@
                         <h4 class="mb-4">Nuestra Solución IaaS: Sencillez y Potencia</h4>
                         <div class="col-md-4 mb-4">
                             <div class="chatbot-card h-100">
-                                <img src="./Images/contr.png" class="img-fluid mx-auto mb-3" alt="Control y Facilidad" style="width: 35%;">
+                                <i class="fas fa-cogs icon"></i> <!-- Icono de control y facilidad -->
                                 <h5>Control y Facilidad de Implementación</h5>
                                 <p>Implementa y controla tus aplicaciones con facilidad, sin necesidad de ser un experto en tecnología.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="chatbot-card h-100">
-                                <img src="./Images/esca.png" class="img-fluid mx-auto mb-3" alt="Escalabilidad Flexible" style="width:35%;">
+                                <i class="fas fa-arrows-alt-h icon"></i> <!-- Icono de escalabilidad -->
                                 <h5>Escalabilidad y Elasticidad</h5>
                                 <p>Escala tus recursos de forma flexible, adaptándote al crecimiento y las demandas fluctuantes de tu negocio.</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="chatbot-card h-100">
-                                <img src="./Images/segu.png" class="img-fluid mx-auto mb-3" alt="Seguridad y Rendimiento" style="width:35%;">
+                                <i class="fas fa-shield-alt icon"></i> <!-- Icono de seguridad y rendimiento -->
                                 <h5>Seguridad Robusta y Alto Rendimiento</h5>
                                 <p>Accede a una infraestructura segura y de alto rendimiento, sin las complicaciones ni la inversión de un centro de datos propio.</p>
                             </div>
@@ -1036,7 +1043,7 @@
             </div>
 
             <!-- Backup y Recuperación de Desastres (DR) -->
-            <div class="row men" id="desas" style="display: none">
+            <div class="row men" id="desas" style="display: none; padding: 0 !important;" >
                 <div class="col-12">
                     <div id="drCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -1097,7 +1104,7 @@
             </div>
 
             <!-- Virtualización de Red (NFV) -->
-            <div class="row men text-center" id="vred" style="display: none">
+            <div class="row men text-center" id="vred" style="display: none; padding: 0 !important;">
                 <div class="col-12">
                     <div id="nfvCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -1169,7 +1176,7 @@
             </div>
 
             <!-- DevOps as a Service -->
-            <div class="row men text-center" id="devOps" style="display: none">
+            <div class="row men text-center" id="devOps" style="display: none; padding: 0 !important;">
                 <div class="col-12">
                     <div id="devOpsCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
