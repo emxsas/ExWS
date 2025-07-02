@@ -40,8 +40,8 @@
     <style>
         /* Estilos generales */
         body {
-            background: #2c3e50; /* Un color oscuro que se ve profesional */
-            color: #ecf0f1; /* Texto claro para contraste */
+            background: #f2f2f2; /* Fondo gris muy claro (casi blanco) */
+            color: #333333; /* Texto oscuro para contraste en fondo claro */
             font-family: 'Inter', sans-serif; /* Fuente moderna y legible */
         }
 
@@ -50,9 +50,9 @@
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            color: white;
+            color: white; /* Mantener texto blanco para banners con imágenes oscuras */
             /* Aumento la opacidad de la capa oscura para mejor legibilidad y estandarización */
-            background-color: rgba(0, 0, 0, 0.85); /* Superposición oscura para legibilidad */
+            background-color: rgba(188, 186, 186, 0.85); /* Superposición oscura para legibilidad */
             background-blend-mode: darken;
         }
 
@@ -60,7 +60,7 @@
             height: 50vh; /* Altura más imponente para el banner principal */
             /* Las propiedades de background-size, background-position, background-color y background-blend-mode
                ahora se gestionan a través de la clase 'background' aplicada en el HTML. */
-            color: white;
+            color: white; /* Asegurar que el texto del hero banner sea blanco */
             text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); /* Sombra pronunciada para el texto */
             display: flex;
             align-items: center;
@@ -81,7 +81,7 @@
 
         /* Navbar personalizada */
         .navbar {
-            background: #34495e !important; /* Un tono un poco más claro que el fondo */
+            background: #34495e !important; /* Tono de gris más oscuro para la barra de navegación */
             border-bottom: 3px solid #3498db; /* Una línea de acento */
         }
 
@@ -91,7 +91,7 @@
         }
 
         .nav-link {
-            color: #ecf0f1 !important;
+            color: #ecf0f1 !important; /* Texto claro para contraste en navbar oscura */
             font-weight: 500;
             transition: color 0.3s ease;
         }
@@ -126,22 +126,27 @@
             color: #3498db; /* Títulos en color de acento */
             margin-bottom: 30px;
             font-weight: bold;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra más sutil para texto en fondo claro */
         }
 
         .men p {
             font-size: 1.1rem; /* Texto más grande para mejor legibilidad */
             line-height: 1.6;
-            color: #ecf0f1;
+            color: #555555; /* Texto oscuro para contraste en fondo claro */
+        }
+        
+        /* Ajuste para los párrafos lead que tienen un color más claro originalmente */
+        .lead {
+            color: #666666; /* Se eliminó !important para permitir que text-white lo sobrescriba en fondos oscuros */
         }
 
         /* Cards de información */
         .card {
-            background-color: rgba(44, 62, 80, 0.9); /* Fondo semitransparente oscuro */
+            background-color: rgba(44, 62, 80, 0.9); /* Fondo semitransparente oscuro (mantener oscuro) */
             border: 1px solid #3498db; /* Borde con color de acento */
             border-radius: 15px; /* Bordes más redondeados */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para profundidad */
-            color: #ecf0f1;
+            color: #ecf0f1; /* Texto claro para contraste en tarjetas oscuras */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -158,6 +163,10 @@
         .card-text ul {
             list-style: none;
             padding: 0;
+        }
+
+        .card-text ul li {
+            color: #ecf0f1; /* Mantener texto claro en listas dentro de tarjetas oscuras */
         }
 
         .card-text ul li:before {
@@ -184,7 +193,7 @@
 
         /* Sección de Contacto */
         #contactform {
-            background-color: rgba(44, 62, 80, 0.9);
+            background-color: rgba(44, 62, 80, 0.9); /* Mantener fondo oscuro para el formulario */
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -199,19 +208,19 @@
         }
 
         #contactform p {
-            color: #ecf0f1;
+            color: #bdc3c7; /* Mantener texto claro en el formulario oscuro */
         }
 
         .form-floating input,
         .form-floating textarea {
-            background-color: #34495e;
+            background-color: #34495e; /* Fondo oscuro para inputs */
             border: 1px solid #3498db;
-            color: #ecf0f1;
+            color: #ecf0f1; /* Texto claro para inputs */
             border-radius: 8px;
         }
 
         .form-floating label {
-            color: #bdc3c7;
+            color: #bdc3c7; /* Label claro para inputs oscuros */
         }
 
         .form-floating input:focus,
@@ -224,7 +233,7 @@
 
         /* Footer */
         footer {
-            background: #34495e;
+            background: #34495e; /* Tono de gris más oscuro para el footer */
             padding: 20px 0;
             text-align: center;
             border-top: 3px solid #3498db;
@@ -233,7 +242,7 @@
 
         footer p {
             margin: 0;
-            color: #ecf0f1;
+            color: #ecf0f1; /* Texto claro para contraste en footer oscuro */
             font-size: 0.9rem;
         }
 
@@ -318,6 +327,7 @@
         #cloudNav .col-md-2 p {
             font-size: 0.9rem;
             margin: 0;
+            color: #333333; /* Color oscuro para texto en fondo claro */
         }
 
         /* Estilos para la sección de ejemplos (Ejemplos apps) */
@@ -329,11 +339,12 @@
         .men.ini .col-md-2.text-center p {
             font-size: 1rem;
             margin-top: 10px;
+            color: #ecf0f1; /* Mantener texto claro en tarjetas oscuras */
         }
 
         /* Estilos para Chatbots y Cards de Beneficios */
         .chatbot-card, .service-card-home .card {
-            background-color: rgba(44, 62, 80, 0.8);
+            background-color: rgba(44, 62, 80, 0.8); /* Mantener fondo oscuro */
             border: 1px solid #3498db;
             border-radius: 15px;
             padding: 25px;
@@ -358,13 +369,13 @@
         }
 
         .chatbot-card h5, .service-card-home .card h5 {
-            color: #ecf0f1;
+            color: #ecf0f1; /* Mantener texto claro en tarjetas oscuras */
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .chatbot-card p, .service-card-home .card p {
-            color: #bdc3c7;
+            color: #bdc3c7; /* Mantener texto claro en tarjetas oscuras */
             font-size: 0.95rem;
         }
 
@@ -378,6 +389,11 @@
             position: relative;
             padding-left: 1.5em; /* Espacio para el icono personalizado */
             margin-bottom: 0.5em;
+            color: #555555; /* Texto oscuro para contraste en fondo claro */
+        }
+        /* Ajuste para listas dentro de tarjetas oscuras */
+        .card ul li {
+            color: #ecf0f1; /* Mantener texto claro en tarjetas oscuras */
         }
 
         .men ul li .fas {
@@ -395,10 +411,19 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Estilos para la sección "Sobre Nosotros" */
+        #sobN .lead {
+            color: #555555 !important; /* Ajustar color de texto para fondo claro */
+        }
+
+        #sobN .d-flex p {
+            color: #555555 !important; /* Ajustar color de texto para fondo claro */
+        }
     </style>
 </head>
 
-<body style="background: #2c3e50;">
+<body style="background: #f2f2f2;">
     <div id="main" class="container-fluid" style="margin: 0; padding: 0; width: 100%;">
         <header>
             <div class="row" style="background: #34495e;">
@@ -406,7 +431,7 @@
                     <nav class="navbar navbar-expand-lg" style="width: 90%;">
                         <nav class="navbar">
                             <a class="navbar-brand" onclick="inicio()" style="cursor: pointer;">
-                                <img src="./Images/LogonoBKG.png" alt="ExpertEase Logo">
+                                <img src="./Images/LogonoBKG.png" alt="ExpertEase Logo" width="auto" height="auto">
                             </a>
                         </nav>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -453,22 +478,22 @@
         <div class="row men" id="cloudNav" style="display: none;">
             <div class="row text-center text-white">
                 <div class="col-2 d-md-block d-none"></div>
-                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('nube')"
+                <div class="col-3 col-md-2 text-center" onclick="repositionDiv('nube')"
                     style="cursor: pointer;">
                     <img src="./Images/sol-bento.png" class="img-fluid" alt="HyperCX">
                     <p>Cloud</p>
                 </div>
-                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('desas')"
+                <div class="col-3 col-md-2 text-center" onclick="repositionDiv('desas')"
                     style="cursor: pointer;">
                     <img src="./Images/sol-dr.png" class="img-fluid" alt="DR">
                     <p>Backup y DR</p>
                 </div>
-                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('vred')"
+                <div class="col-3 col-md-2 text-center" onclick="repositionDiv('vred')"
                     style="cursor: pointer;">
                     <img src="./Images/sol-nfv.png" class="img-fluid" alt="NFV">
                     <p>Virtualización de Red</p>
                 </div>
-                <div class="col-3 col-md-2 text-center text-white" onclick="repositionDiv('devOps')"
+                <div class="col-3 col-md-2 text-center" onclick="repositionDiv('devOps')"
                     style="cursor: pointer;">
                     <img src="./Images/devopscloud.png" class="img-fluid" alt="DevOps">
                     <p>DevOps</p>
@@ -479,13 +504,13 @@
 
         <!-- Contenido principal de la página de inicio -->
         
-<div class="container-fluid" style="background: #2c3e50;">
+<div class="container-fluid" style="background: #f2f2f2;">
     
     <!-- Servicios Destacados en la Página Principal (Resumen de todos los servicios) -->
     <div id="solsdiv" class="ini men container-fluid row justify-content-center align-items-center">
-        <div class="row text-center text-white mb-4">
+        <div class="row text-center mb-4">
             <h1>Nuestras Soluciones Tecnológicas</h1>
-            <p class="lead" style="color: #bdc3c7;">Impulsa tu negocio con innovación y eficiencia. Descubre cómo podemos ayudarte a alcanzar tus objetivos.</p>
+            <p class="lead">Impulsa tu negocio con innovación y eficiencia. Descubre cómo podemos ayudarte a alcanzar tus objetivos.</p>
         </div>
         <div class="row text-center">
             <!-- 1. Desarrollo de Software como Servicio (SDaaS) -->
@@ -544,7 +569,7 @@
         style="background-image: url('./Images/why-us-bg.jpg');">
         <div class="row text-center text-white mb-4">
             <h1>¿Por Qué Elegir ExpertEase?</h1>
-            <p class="lead" style="color: #bdc3c7;">
+            <p class="lead text-white" >
                 Tu éxito es nuestra prioridad. Más allá de la tecnología, ofrecemos una asociación estratégica que impulsa el crecimiento y la innovación.
             </p>
         </div>
@@ -553,21 +578,21 @@
                 <div class="card p-4 h-100">
                     <i class="fas fa-code-branch icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Dominio Tecnológico Integral</h5>
-                    <p class="card-text">Desde el desarrollo de software a la medida hasta la administración de infraestructura en la nube y DevOps, cubrimos todo el espectro tecnológico para una solución 360°.</p>
+                    <p class="card-text text-white">Desde el desarrollo de software a la medida hasta la administración de infraestructura en la nube y DevOps, cubrimos todo el espectro tecnológico para una solución 360°.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card p-4 h-100">
                     <i class="fas fa-users-cog icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Equipo de Expertos Dedicado</h5>
-                    <p class="card-text">Contamos con desarrolladores, arquitectos y consultores con amplia experiencia, listos para enfrentar tus desafíos más complejos con soluciones innovadoras.</p>
+                    <p class="card-text text-white">Contamos con desarrolladores, arquitectos y consultores con amplia experiencia, listos para enfrentar tus desafíos más complejos con soluciones innovadoras.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card p-4 h-100">
                     <i class="fas fa-handshake-alt-slash icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Enfoque Centrado en Resultados</h5>
-                    <p class="card-text">Nuestro compromiso va más allá de la implementación. Nos enfocamos en entregar valor tangible que optimice tus operaciones y acelere tu retorno de inversión.</p>
+                    <p class="card-text text-white">Nuestro compromiso va más allá de la implementación. Nos enfocamos en entregar valor tangible que optimice tus operaciones y acelere tu retorno de inversión.</p>
                 </div>
             </div>
         </div>
@@ -575,51 +600,51 @@
 
     <!-- Sección de Clientes o Casos de Uso (Ejemplos de Aplicaciones) -->
     <div class="men ini container-fluid row justify-content-center align-items-center">
-        <div class="row text-center text-white mb-4">
+        <div class="row text-center mb-4">
             <h1>Casos de Éxito y Aplicaciones Destacadas</h1>
-            <p class="lead" style="color: #bdc3c7;">Descubre cómo hemos transformado negocios como el tuyo con soluciones a medida y estratégicas.</p>
+            <p class="lead">Descubre cómo hemos transformado negocios como el tuyo con soluciones a medida y estratégicas.</p>
         </div>
         <div class="row text-center">
             <div class="col-6 col-md-2 mb-4">
                 <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center">
                     <img src="./Images/coti.png" class="img-fluid mb-2" alt="Cotizadores Web" style="width: 35%;">
                     <h5 class="card-title">Cotizadores Web Interactivos</h5>
-                    <p class="card-text">Impulsa tus ventas con herramientas automatizadas y personalizadas que capturan leads eficazmente.</p>
+                    <p class="card-text text-white">Impulsa tus ventas con herramientas automatizadas y personalizadas que capturan leads eficazmente.</p>
                 </div>
             </div>
             <div class="col-6 col-md-2 mb-4">
                 <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center">
                     <img src="./Images/inve.png" class="img-fluid mb-2" alt="Control de Inventarios" style="width: 35%;">
                     <h5 class="card-title">Sistemas de Inventario Avanzados</h5>
-                    <p class="card-text">Optimiza tu cadena de suministro y reduce costos con un control preciso de existencias.</p>
+                    <p class="card-text text-white">Optimiza tu cadena de suministro y reduce costos con un control preciso de existencias.</p>
                 </div>
             </div>
             <div class="col-6 col-md-2 mb-4">
                 <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center">
                     <i class="fas fa-robot icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Chatbots de Soporte 24/7</h5>
-                    <p class="card-text">Mejora la satisfacción del cliente y libera a tu equipo con respuestas instantáneas.</p>
+                    <p class="card-text text-white">Mejora la satisfacción del cliente y libera a tu equipo con respuestas instantáneas.</p>
                 </div>
             </div>
             <div class="col-6 col-md-2 mb-4">
                 <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center">
                     <i class="fas fa-cloud-upload-alt icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Migraciones a la Nube Exitosas</h5>
-                    <p class="card-text">Transiciona tu infraestructura a la nube con seguridad, eficiencia y mínima interrupción.</p>
+                    <p class="card-text text-white">Transiciona tu infraestructura a la nube con seguridad, eficiencia y mínima interrupción.</p>
                 </div>
             </div>
             <div class="col-6 col-md-2 mb-4">
                 <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center">
                     <i class="fas fa-tools icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Automatización DevOps</h5>
-                    <p class="card-text">Ciclos de desarrollo e implementación acelerados para innovar más rápido y con mayor calidad.</p>
+                    <p class="card-text text-white">Ciclos de desarrollo e implementación acelerados para innovar más rápido y con mayor calidad.</p>
                 </div>
             </div>
             <div class="col-6 col-md-2 mb-4">
                 <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center">
                     <img src="./Images/odoo.png" class="img-fluid mb-2" alt="Integración Odoo" style="width: 70%;">
                     <h5 class="card-title">Implementación e Integración Odoo</h5>
-                    <p class="card-text">Potencia tu administración empresarial con soluciones ERP/CRM personalizadas y eficientes.</p>
+                    <p class="card-text text-white">Potencia tu administración empresarial con soluciones ERP/CRM personalizadas y eficientes.</p>
                 </div>
             </div>
         </div>
@@ -650,7 +675,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Libera el Verdadero Potencial de tu Negocio con la Nube de ExpertEase</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 En el mundo empresarial actual, la tecnología es clave para el éxito. Pero, ¿qué pasa cuando la infraestructura tecnológica se convierte en un problema en lugar de una ventaja? Para las empresas, mantener un centro de datos propio o enfrentarse a la complejidad de los hyperscalers (GCP, AWS & Azure) puede ser un desafío costoso y abrumador.
                                 Ofrecemos la solución perfecta: una plataforma de nube simplificada, potente y asequible, diseñada específicamente para las necesidades de tu negocio.
                             </p>
@@ -686,27 +711,27 @@
                         <h4 class="mb-4 text-center">Desafíos de un Centro de Datos Propio</h4>
                         <div class="col-lg-8">
                             <dl class="row">
-                                <dt class="col-12 col-md-4"><i class="fas fa-money-bill-wave me-2"></i> Costos Operativos Elevados</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-money-bill-wave me-2"></i> Costos Operativos Elevados</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Electricidad, espacio, HVAC y mantenimiento. te liberamos de estos gastos, permitiéndote pagar solo por lo que usas.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-sync-alt me-2"></i> Renovación Tecnológica Constante</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-sync-alt me-2"></i> Renovación Tecnológica Constante</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Cada 3 años, aproximadamente. Con nosotros, siempre tendrás acceso a la última tecnología, sin inversiones costosas.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-tasks me-2"></i> Administración e Implementación Complejas</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-tasks me-2"></i> Administración e Implementación Complejas</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Simplificamos la administración de tu infraestructura, liberando tiempo y recursos para tu negocio.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-clock me-2"></i> Tiempos de Implementación Largos</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-clock me-2"></i> Tiempos de Implementación Largos</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Te permitimos implementar recursos de forma instantánea, adaptándote a las necesidades de tu negocio.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-exclamation-triangle me-2"></i> Seguridad de la Información Vulnerable</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-exclamation-triangle me-2"></i> Seguridad de la Información Vulnerable</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Ofrecemos una infraestructura segura y confiable, protegiendo tus datos críticos.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-user-times me-2"></i> Falta de Capacitación Técnica</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-user-times me-2"></i> Falta de Capacitación Técnica</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Es fácil de usar, eliminando la necesidad de costosa capacitación técnica.</p>
                                 </dd>
@@ -718,19 +743,19 @@
                         <h4 class="mb-4 text-center">Desafíos de Nubes Públicas (AWS, GCP, Azure)</h4>
                         <div class="col-lg-8">
                             <dl class="row">
-                                <dt class="col-12 col-md-4"><i class="fas fa-dollar-sign me-2"></i> Costos Impredecibles</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-dollar-sign me-2"></i> Costos Impredecibles</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Facturas inesperadas debido a sus modelos de precios complejos. Ofrecemos precios transparentes y predecibles.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-brain me-2"></i> Complejidad y Curva de Aprendizaje</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-brain me-2"></i> Complejidad y Curva de Aprendizaje</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Requieren conocimientos técnicos avanzados. Es intuitivo y fácil de usar, incluso para quienes no son expertos.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-handshake-alt-slash me-2"></i> Soporte Limitado</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-handshake-alt-slash me-2"></i> Soporte Limitado</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>El soporte de estas nubes puede ser impersonal y lento. Te ofrecemos un soporte personalizado y eficiente.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-file-export me-2"></i> Costos de Egreso de Datos</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-file-export me-2"></i> Costos de Egreso de Datos</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>Contamos con planes que se adaptan a las necesidades de cada cliente, y en algunos casos cuenta con ancho de banda ilimitado.</p>
                                 </dd>
@@ -776,7 +801,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Transforma tus Ideas en Soluciones Digitales Potentes</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 Con nuestro modelo de Desarrollo de Software como Servicio (SDaaS), obtienes la flexibilidad y la potencia de un equipo de desarrollo de software dedicado, sin la carga de la administración interna. Creamos, mantenemos y evolucionamos tus aplicaciones, permitiéndote concentrarte en el core de tu negocio.
                             </p>
                         </div>
@@ -812,17 +837,17 @@
                         <div class="col-md-6 mb-4">
                             <div class="card p-4 h-100 text-start">
                                 <h5 class="card-title"><i class="fas fa-hand-holding-usd me-2"></i> Optimización de Costos</h5>
-                                <p>Reduce significativamente los gastos operativos y de capital asociados con la contratación, capacitación y administración de un equipo de desarrollo interno. Paga solo por el servicio que utilizas, sin costos ocultos.</p>
+                                <p class="text-white">Reduce significativamente los gastos operativos y de capital asociados con la contratación, capacitación y administración de un equipo de desarrollo interno. Paga solo por el servicio que utilizas, sin costos ocultos.</p>
                                 <h5 class="card-title mt-3"><i class="fas fa-tachometer-alt me-2"></i> Agilidad y Rapidez en el Mercado</h5>
-                                <p>Acelera el ciclo de desarrollo y la implementación de nuevas funcionalidades. Lanza tus productos y servicios más rápido, obteniendo una ventaja competitiva.</p>
+                                <p class="text-white">Acelera el ciclo de desarrollo y la implementación de nuevas funcionalidades. Lanza tus productos y servicios más rápido, obteniendo una ventaja competitiva.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="card p-4 h-100 text-start">
                                 <h5 class="card-title"><i class="fas fa-users-cog me-2"></i> Acceso a Talento Especializado</h5>
-                                <p>Benefíciate de un equipo de desarrolladores altamente calificados y experimentados en diversas tecnologías y metodologías, sin la complejidad de reclutarlos y retenerlos.</p>
+                                <p class="text-white">Benefíciate de un equipo de desarrolladores altamente calificados y experimentados en diversas tecnologías y metodologías, sin la complejidad de reclutarlos y retenerlos.</p>
                                 <h5 class="card-title mt-3"><i class="fas fa-shield-alt me-2"></i> Seguridad y Mantenimiento Garantizados</h5>
-                                <p>Nos encargamos proactivamente de la seguridad, las actualizaciones y el mantenimiento de tu software, asegurando que esté siempre optimizado, protegido y funcionando sin interrupciones.</p>
+                                <p class="text-white">Nos encargamos proactivamente de la seguridad, las actualizaciones y el mantenimiento de tu software, asegurando que esté siempre optimizado, protegido y funcionando sin interrupciones.</p>
                             </div>
                         </div>
                     </div>
@@ -893,7 +918,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">La Revolución de la Conversación al Servicio de tu Negocio</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 En ExpertEase, diseñamos y desplegamos chatbots de última generación que no solo responden preguntas, sino que entienden, aprenden y actúan. Desde la optimización de la atención al cliente hasta la automatización de ventas y soporte técnico, nuestros chatbots están listos para transformar tu interacción digital.
                             </p>
                         </div>
@@ -1031,7 +1056,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Protege tu Activo Más Valioso: Tus Datos</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 Las interrupciones de negocio debido a la pérdida de datos o fallos del sistema pueden ser devastadoras. En ExpertEase, ofrecemos una solución de Backup y Recuperación de Desastres (DR) rentable pero ultra confiable, basada en la nube. Operamos en una infraestructura compartida extremadamente consistente en diferentes partes del mundo, respaldando todos tus datos y servicios críticos, proporcionando recuperación en poco tiempo.
                             </p>
                         </div>
@@ -1056,7 +1081,7 @@
                     <div class="row justify-content-center text-start mb-5">
                         <h4 class="mb-4 text-center">¿Por qué optar por nuestra solución de DR?</h4>
                         <div class="col-lg-8">
-                            <ul style="color: #ecf0f1; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                            <ul>
                                 <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> El respaldo delta solo realiza un seguimiento de los cambios actuales, en lugar de congestionar la red con datos irrelevantes y redundantes, optimizando tus recursos.</li>
                                 <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Medidas preventivas que te ahorran disgustos innecesarios en momentos de falsas alarmas, con recuperaciones en minutos.</li>
                                 <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Centros de datos remotos alrededor del mundo para proteger tus datos sin importar qué, garantizando la máxima disponibilidad.</li>
@@ -1092,7 +1117,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">NFV: El Futuro de tu Infraestructura de Red</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 Network Functions Virtualization (NFV) es una plataforma de virtualización de red diseñada para acelerar la transformación digital de tu negocio. Consiste en transformar las funciones de red tradicionales, basadas en hardware, en una plataforma de software. NFV te permite ofrecer servicios de red ágiles, flexibles y rentables, adaptándose a las crecientes demandas de tu entorno.
                             </p>
                         </div>
@@ -1102,19 +1127,19 @@
                         <h4 class="mb-4 text-center">Características Clave de Nuestra Solución NFV</h4>
                         <div class="col-lg-8">
                             <dl class="row">
-                                <dt class="col-12 col-md-4"><i class="fas fa-rocket me-2"></i> Implementación Ágil y Flexible</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-rocket me-2"></i> Implementación Ágil y Flexible</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>NFV se puede desplegar rápidamente en cualquier entorno de nube, lo que permite ofrecer nuevos servicios en cuestión de minutos, reduciendo drásticamente los tiempos de lanzamiento.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-arrows-alt-h me-2"></i> Escalabilidad y Elasticidad</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-arrows-alt-h me-2"></i> Escalabilidad y Elasticidad</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>La plataforma se puede escalar horizontal y verticalmente para satisfacer las demandas dinámicas del ambiente, asegurando que siempre tengas los recursos necesarios.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-check-double me-2"></i> Alta Disponibilidad Garantizada</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-check-double me-2"></i> Alta Disponibilidad Garantizada</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>NFV está diseñado para ofrecer un alto nivel de disponibilidad y confianza, lo que garantiza que los servicios de red estén siempre disponibles y funcionando sin interrupciones.</p>
                                 </dd>
-                                <dt class="col-12 col-md-4"><i class="fas fa-link me-2"></i> Integración Sencilla con Otros Ambientes</dt>
+                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-link me-2"></i> Integración Sencilla con Otros Ambientes</dt>
                                 <dd class="col-12 col-md-8">
                                     <p>La plataforma se integra fácilmente con otros sistemas y aplicaciones, lo que permite crear soluciones de sitio a sitio complejas y eficientes.</p>
                                 </dd>
@@ -1125,7 +1150,7 @@
                     <div class="row justify-content-center text-start mb-5">
                         <h4 class="mb-4 text-center">Funcionalidades Avanzadas</h4>
                         <div class="col-lg-8">
-                            <ul style="color: #ecf0f1; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                            <ul>
                                 <li class="mb-2"><i class="fas fa-network-wired me-2"></i> Soporte de alta disponibilidad utilizando el protocolo VRRP a través de keepalived, garantizando la continuidad.</li>
                                 <li class="mb-2"><i class="fas fa-route me-2"></i> Enrutamiento avanzado entre redes virtuales conectadas para una administración de tráfico óptima.</li>
                                 <li class="mb-2"><i class="fas fa-lock me-2"></i> VPN de cliente utilizando OpenVPN para conexiones seguras y cifradas.</li>
@@ -1164,7 +1189,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Agilidad, Eficiencia y Colaboración para tu Software</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 DevOps as a Service transforma tu ciclo de vida de desarrollo, integrando la colaboración y la automatización en cada paso. En ExpertEase, te ofrecemos un equipo de expertos que optimizará tus procesos de integración continua (CI) e implementación continua (CD), garantizando entregas más rápidas, seguras y confiables.
                             </p>
                         </div>
@@ -1175,8 +1200,8 @@
                         <div class="col-md-6 mb-4">
                             <div class="card p-4 h-100 text-start">
                                 <h5 class="card-title"><i class="fas fa-cogs me-2"></i> 1.- Implementaciones Sin Esfuerzo: Automatización Directa con Cada Commit</h5>
-                                <p>Implementamos pipelines de CI/CD robustas que automatizan la construcción, prueba e implementación de tu código, reduciendo errores y acelerando tus entregas. Trabajamos con:</p>
-                                <ul style="color: #ecf0f1; padding: 0;">
+                                <p class="text-white">Implementamos pipelines de CI/CD robustas que automatizan la construcción, prueba e implementación de tu código, reduciendo errores y acelerando tus entregas. Trabajamos con:</p>
+                                <ul style="padding: 0;">
                                     <li><i class="fas fa-check me-2"></i> GitHub Actions</li>
                                     <li><i class="fas fa-check me-2"></i> Jenkins</li>
                                     <li><i class="fas fa-check me-2"></i> GitLab CI/CD</li>
@@ -1191,8 +1216,8 @@
                         <div class="col-md-6 mb-4">
                             <div class="card p-4 h-100 text-start">
                                 <h5 class="card-title"><i class="fas fa-server me-2"></i> 2.- Tu Entorno Ideal, Sin Importar el Lenguaje o Plataforma</h5>
-                                <p>Configuramos y gestionamos entornos de desarrollo y producción optimizados para tus necesidades específicas, asegurando compatibilidad y rendimiento. Experiencia en:</p>
-                                <ul style="color: #ecf0f1; padding: 0;">
+                                <p class="text-white">Configuramos y gestionamos entornos de desarrollo y producción optimizados para tus necesidades específicas, asegurando compatibilidad y rendimiento. Experiencia en:</p>
+                                <ul style="padding: 0;">
                                     <li><i class="fas fa-check me-2"></i> **Bases de Datos:** MySQL, PostgreSQL, MongoDB, SQL Server, etc.</li>
                                     <li><i class="fas fa-check me-2"></i> **Lenguajes Back-end:** Node.js, Python/Django, Java/Spring, Go, PHP, .NET, etc.</li>
                                     <li><i class="fas fa-check me-2"></i> **Lenguajes Front-end:** React, Angular, Vue.js, Svelte, etc.</li>
@@ -1229,7 +1254,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Maximiza el Potencial de tu Negocio con Nuestra Guía Experta</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 En el dinámico mundo tecnológico actual, tomar las decisiones correctas es crucial. Nuestros servicios de consultoría tecnológica te brindan la experiencia y el conocimiento necesarios para optimizar tus operaciones, implementar nuevas soluciones y asegurar una ventaja competitiva duradera.
                             </p>
                         </div>
@@ -1308,7 +1333,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Nuestra Misión</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 <i class="fas fa-bullseye me-2" style="color: #3498db;"></i>
                                 Empoderar a las empresas a prosperar en la era digital y de la inteligencia artificial, transformando sus operaciones a través de soluciones de software innovadoras, desarrollo a medida y servicios robustos en la nube, liberando su potencial y optimizando cada proceso.
                             </p>
@@ -1318,7 +1343,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Nuestra Visión</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 <i class="fas fa-eye me-2" style="color: #3498db;"></i>
                                 Ser el socio estratégico líder en soluciones de software e inteligencia artificial en el mercado de habla hispana, reconocido por nuestra capacidad de innovar, automatizar y crear valor sostenible para nuestros clientes, impulsando su crecimiento y competitividad en un mundo en constante evolución.
                             </p>
@@ -1328,7 +1353,7 @@
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
                             <h4 class="mb-4">Nuestro Propósito</h4>
-                            <p class="lead" style="color: #bdc3c7;">
+                            <p class="lead">
                                 En esta era de profunda transformación digital, donde la Inteligencia Artificial está redefiniendo cada aspecto de los negocios, nuestro propósito va más allá de la simple provisión de servicios. Existimos para ser el catalizador de la evolución de nuestros clientes. Nos dedicamos a:
                             </p>
                             <div class="row text-start mt-4">
@@ -1337,7 +1362,7 @@
                                         <i class="fas fa-trash-alt me-3 mt-1" style="font-size: 1.8rem; color: #3498db;"></i>
                                         <div>
                                             <h5 class="mb-1" style="color: #3498db;">Eliminar la fricción y el desperdicio</h5>
-                                            <p style="color: #bdc3c7;">Al erradicar procesos manuales, basados en papel, y propensos a errores, permitimos que las empresas reasignen recursos y talento a iniciativas de mayor valor estratégico.</p>
+                                            <p>Al erradicar procesos manuales, basados en papel, y propensos a errores, permitimos que las empresas reasignen recursos y talento a iniciativas de mayor valor estratégico.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1346,7 +1371,7 @@
                                         <i class="fas fa-lightbulb me-3 mt-1" style="font-size: 1.8rem; color: #3498db;"></i>
                                         <div>
                                             <h5 class="mb-1" style="color: #3498db;">Impulsar la eficiencia y la innovación</h5>
-                                            <p style="color: #bdc3c7;">A través del desarrollo de software como servicio a la medida, la implementación de componentes de IA como chatbots avanzados, y la migración a la nube, no solo optimizamos operaciones, sino que también abrimos puertas a nuevas oportunidades y modelos de negocio.</p>
+                                            <p>A través del desarrollo de software como servicio a la medida, la implementación de componentes de IA como chatbots avanzados, y la migración a la nube, no solo optimizamos operaciones, sino que también abrimos puertas a nuevas oportunidades y modelos de negocio.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1355,7 +1380,7 @@
                                         <i class="fas fa-road me-3 mt-1" style="font-size: 1.8rem; color: #3498db;"></i>
                                         <div>
                                             <h5 class="mb-1" style="color: #3498db;">Proveer un camino claro hacia el futuro</h5>
-                                            <p style="color: #bdc3c7;">Gestionamos la complejidad de la infraestructura tecnológica, desde la seguridad y el respaldo hasta DevOps y NFV, permitiendo que nuestros clientes se concentren en su core business, sabiendo que su plataforma tecnológica es resiliente, escalable y preparada para el futuro.</p>
+                                            <p>Gestionamos la complejidad de la infraestructura tecnológica, desde la seguridad y el respaldo hasta DevOps y NFV, permitiendo que nuestros clientes se concentren en su core business, sabiendo que su plataforma tecnológica es resiliente, escalable y preparada para el futuro.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1364,12 +1389,12 @@
                                         <i class="fas fa-chart-line me-3 mt-1" style="font-size: 1.8rem; color: #3498db;"></i>
                                         <div>
                                             <h5 class="mb-1" style="color: #3498db;">Crear valor tangible y medible</h5>
-                                            <p style="color: #bdc3c7;">Nuestro compromiso es entregar soluciones completas que generen un retorno de inversión significativo, ya sea reduciendo costos operativos, mejorando la toma de decisiones, o habilitando una operación 24/7 sin intervención humana constante.</p>
+                                            <p>Nuestro compromiso es entregar soluciones completas que generen un retorno de inversión significativo, ya sea reduciendo costos operativos, mejorando la toma de decisiones, o habilitando una operación 24/7 sin intervención humana constante.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="lead mt-4" style="color: #bdc3c7;">
+                            <p class="lead mt-4">
                                 En ExpertEase, construimos más que software; construimos el futuro de las empresas, capacitándolas para no solo sobrevivir, sino prosperar y liderar en la era de la inteligencia artificial.
                             </p>
                         </div>
