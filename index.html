@@ -7,7 +7,7 @@
     <title>ExpertEase | Desarrollo de Software a Medida, Chatbots IA y Soluciones en la Nube</title>
     
     <!-- Metadatos para SEO y Marketing -->
-    <meta name="description" content="ExpertEase: Tu socio estratégico en transformación digital. Ofrecemos Desarrollo de Software como Servicio (SDaaS), Chatbots inteligentes, Soluciones en la Nube, DevOps, Backup y DR, Almacenamiento en la Nube, y Consultoría tecnológica. Impulsa tu negocio con innovación y eficiencia.">
+    <meta name="description" content="ExpertEase: Tu socio estratégico en transformación digital. Ofrecemos Desarrollo de Software como Servicio (SDaaS), Chatbots inteligentes, Soluciones en la Nube, DevOps, Backup y DR, NFV, y Consultoría tecnológica. Impulsa tu negocio con innovación y eficiencia.">
     <meta name="keywords" content="desarrollo de software, SDaaS, software a medida, chatbots, inteligencia artificial, soluciones en la nube, AWS, Azure, Google Cloud, DevOps, Backup, Recuperación de Desastres, DR, Almacenamiento en la Nube, consultoría tecnológica, transformación digital, México">
     <meta name="author" content="ExpertEase">
     <link rel="canonical" href="https://www.expertease.com.mx/"> 
@@ -18,6 +18,11 @@
     <meta property="og:title" content="ExpertEase | Desarrollo de Software a Medida, Chatbots IA y Soluciones en la Nube">
     <meta property="og:description" content="ExpertEase: Tu socio estratégico en transformación digital. Impulsa tu negocio con innovación y eficiencia.">
     <meta property="og:image" content="https://www.expertease.com.mx/Images/LogonoBKG.png"> 
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/LogonoBKG.png" type="image/png">
+    <!-- Apple Touch Icon (para dispositivos iOS) -->
+    <link rel="apple-touch-icon" href="./Images/LogonoBKG.png">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -544,7 +549,15 @@
                     <p class="card-text">Infraestructura robusta, segura y flexible para escalar tu negocio sin límites.</p>
                 </div>
             </div>
-            <!-- 4. Backup y Recuperación de Desastres (DR) -->
+            <!-- 4. DevOps as a Service -->
+            <div class="col-12 col-md-4 col-lg-2 mb-4 service-card-home" onclick="repositionDiv('devOps')" style="cursor: pointer;">
+                <div class="card p-3 h-100">
+                    <i class="fas fa-cogs icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
+                    <h5 class="card-title">DevOps as a Service</h5>
+                    <p class="card-text">Agiliza el desarrollo e implementación de software con automatización y eficiencia de vanguardia.</p>
+                </div>
+            </div>
+            <!-- 5. Backup y Recuperación de Desastres (DR) -->
             <div class="col-12 col-md-4 col-lg-2 mb-4 service-card-home" onclick="repositionDiv('desas')" style="cursor: pointer;">
                 <div class="card p-3 h-100">
                     <i class="fas fa-database icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
@@ -552,22 +565,14 @@
                     <p class="card-text">Protege tus datos críticos y garantiza la continuidad del negocio ante cualquier eventualidad.</p>
                 </div>
             </div>
-            <!-- 5. Almacenamiento en la Nube -->
+            <!-- 6. Almacenamiento en la Nube -->
             <div class="col-12 col-md-4 col-lg-2 mb-4 service-card-home" onclick="repositionDiv('almacenamientoNube')" style="cursor: pointer;">
                 <div class="card p-3 h-100">
                     <i class="fas fa-hdd icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
                     <h5 class="card-title">Almacenamiento en la Nube</h5>
                     <p class="card-text">Guarda, accede y protege tus datos con flexibilidad y seguridad inigualables.</p>
                 </div>
-            </div>          
-            <!-- 6. DevOps as a Service -->
-            <div class="col-12 col-md-4 col-lg-2 mb-4 service-card-home" onclick="repositionDiv('devOps')" style="cursor: pointer;">
-                <div class="card p-3 h-100">
-                    <i class="fas fa-cogs icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
-                    <h5 class="card-title">DevOps as a Service</h5>
-                    <p class="card-text">Agiliza el desarrollo e implementación de software con automatización y eficiencia de vanguardia.</p>
-                </div>
-            </div> 
+            </div>           
         </div>
     </div>
 
@@ -1093,7 +1098,7 @@
                                 <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Protección Total:** Tus datos están seguros en centros de datos remotos y redundantes, preparados para cualquier eventualidad.</li>
                                 <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Eficiencia de Recursos:** El respaldo inteligente reduce la congestión de red y optimiza tu almacenamiento, ahorrándote costos.</li>
                                 <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Simplicidad en la Gestión:** Configura y monitorea tus respaldos fácilmente desde una plataforma intuitiva.</li>
-                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Costo-Efectividad:** Obtén una protección de nivel empresarial sin la necesidad de grandes inversiones en infraestructura física.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Costo-Eficiencia:** Obtén una protección de nivel empresarial sin la necesidad de grandes inversiones en infraestructura física.</li>
                             </ul>
                         </div>
                     </div>
@@ -1104,7 +1109,7 @@
                 </div>
             </div>
 
-            <!-- Almacenamiento en la Nube -->
+            <!-- Almacenamiento en la Nube (Reemplazo de NFV) -->
             <div class="row men text-center" id="almacenamientoNube" style="display: none; padding: 0 !important;">
                 <div class="col-12">
                     <div id="almacenamientoNubeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -1386,7 +1391,7 @@
                                         <i class="fas fa-road me-3 mt-1" style="font-size: 1.8rem; color: #3498db;"></i>
                                         <div>
                                             <h5 class="mb-1" style="color: #3498db;">Proveer un camino claro hacia el futuro</h5>
-                                            <p>Gestionamos la complejidad de la infraestructura tecnológica, desde la seguridad y el respaldo hasta DevOps, permitiendo que nuestros clientes se concentren en su core business, sabiendo que su plataforma tecnológica es resiliente, escalable y preparada para el futuro.</p>
+                                            <p>Gestionamos la complejidad de la infraestructura tecnológica, desde la seguridad y el respaldo hasta DevOps y NFV, permitiendo que nuestros clientes se concentren en su core business, sabiendo que su plataforma tecnológica es resiliente, escalable y preparada para el futuro.</p>
                                         </div>
                                     </div>
                                 </div>
