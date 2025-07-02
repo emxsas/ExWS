@@ -8,7 +8,7 @@
     
     <!-- Metadatos para SEO y Marketing -->
     <meta name="description" content="ExpertEase: Tu socio estratégico en transformación digital. Ofrecemos Desarrollo de Software como Servicio (SDaaS), Chatbots inteligentes, Soluciones en la Nube, DevOps, Backup y DR, NFV, y Consultoría tecnológica. Impulsa tu negocio con innovación y eficiencia.">
-    <meta name="keywords" content="desarrollo de software, SDaaS, software a medida, chatbots, inteligencia artificial, soluciones en la nube, AWS, Azure, Google Cloud, DevOps, CI/CD, Backup, Recuperación de Desastres, DR, Virtualización de Red, NFV, consultoría tecnológica, transformación digital, México">
+    <meta name="keywords" content="desarrollo de software, SDaaS, software a medida, chatbots, inteligencia artificial, soluciones en la nube, AWS, Azure, Google Cloud, DevOps, Backup, Recuperación de Desastres, DR, Almacenamiento en la Nube, consultoría tecnológica, transformación digital, México">
     <meta name="author" content="ExpertEase">
     <link rel="canonical" href="https://www.expertease.com.mx/"> 
 
@@ -462,7 +462,7 @@
                                             <li><a class="dropdown-item" onclick="uncover('chatbots')">Chatbots Inteligentes</a></li>
                                             <li><a class="dropdown-item" onclick="repositionDiv('nube')">Soluciones en la Nube</a></li>
                                             <li><a class="dropdown-item" onclick="repositionDiv('desas')">Backup y Recuperación de Desastres (DR)</a></li>
-                                            <li><a class="dropdown-item" onclick="repositionDiv('vred')">Virtualización de Red (NFV)</a></li>
+                                            <li><a class="dropdown-item" onclick="repositionDiv('almacenamientoNube')">Almacenamiento en la Nube</a></li>
                                             <li><a class="dropdown-item" onclick="repositionDiv('devOps')">DevOps as a Service</a></li>
                                             <li><a class="dropdown-item" onclick="uncover('consultoria')">Consultoría Tecnológica</a></li>
                                         </ul>
@@ -495,10 +495,10 @@
                     <i class="fas fa-database icon-fa" alt="DR"></i> <!-- Icono para Backup y DR -->
                     <p>Backup y DR</p>
                 </div>
-                <div class="col-3 col-md-2 text-center" onclick="repositionDiv('vred')"
+                <div class="col-3 col-md-2 text-center" onclick="repositionDiv('almacenamientoNube')"
                     style="cursor: pointer;">
-                    <i class="fas fa-network-wired icon-fa" alt="NFV"></i> <!-- Icono para Virtualización de Red -->
-                    <p>Virtualización de Red</p>
+                    <i class="fas fa-hdd icon-fa" alt="Almacenamiento en la Nube"></i> <!-- Icono para Almacenamiento en la Nube -->
+                    <p>Almacenamiento en la Nube</p>
                 </div>
                 <div class="col-3 col-md-2 text-center" onclick="repositionDiv('devOps')"
                     style="cursor: pointer;">
@@ -560,12 +560,12 @@
                     <p class="card-text">Protege tus datos críticos y garantiza la continuidad del negocio ante cualquier eventualidad.</p>
                 </div>
             </div>
-            <!-- 6. Virtualización de Red (NFV) -->
-            <div class="col-12 col-md-4 col-lg-2 mb-4 service-card-home" onclick="repositionDiv('vred')" style="cursor: pointer;">
+            <!-- 6. Almacenamiento en la Nube -->
+            <div class="col-12 col-md-4 col-lg-2 mb-4 service-card-home" onclick="repositionDiv('almacenamientoNube')" style="cursor: pointer;">
                 <div class="card p-3 h-100">
-                    <i class="fas fa-network-wired icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
-                    <h5 class="card-title">Virtualización de Red (NFV)</h5>
-                    <p class="card-text">Transforma tu infraestructura de red con agilidad, flexibilidad y una eficiencia sin precedentes.</p>
+                    <i class="fas fa-hdd icon" style="font-size: 3rem; color: #3498db; margin-bottom: 15px;"></i>
+                    <h5 class="card-title">Almacenamiento en la Nube</h5>
+                    <p class="card-text">Guarda, accede y protege tus datos con flexibilidad y seguridad inigualables.</p>
                 </div>
             </div>           
         </div>
@@ -668,7 +668,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                                <div class="hero-banner background" style="background-image: url('./Images/cloud.jpg');">
+                                <div class="hero-banner background" style="background-image: url('./Images/cloud.jpg');" alt="Nube">
                                     <div class="col text-center">
                                         <h1 class="display-3">Soluciones en la Nube</h1>
                                         <h3>Desempeño Superior, Seguridad Robusta, Ahorro Inteligente: Tu Infraestructura Simplificada.</h3>
@@ -797,7 +797,7 @@
             <div class="row men" id="sedaas" style="display: none;">
                 <div class="col-12">
                     <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                    <div class="hero-banner background" style="background-image: url('./Images/appdev1.jpg');">
+                    <div class="hero-banner background" style="background-image: url('./Images/appdev1.jpg');" alt="Desarrollo de Software como Servicio">
                         <div class="col text-center">
                             <h1 class="display-3">Desarrollo de Software como Servicio (SDaaS)</h1>
                             <h3>Tu visión, hecha realidad. Software a medida, gestionado por expertos.</h3>
@@ -914,7 +914,7 @@
             <div class="row men" id="chatbots" style="display: none;">
                 <div class="col-12">
                     <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                    <div class="hero-banner background" style="background-image: url('./Images/bots.png');">
+                    <div class="hero-banner background" style="background-image: url('./Images/bots.png');" alt="Chatbots">
                         <div class="col text-center">
                             <h1 class="display-3">Chatbots Inteligentes</h1>
                             <h3>Automatiza la atención al cliente, personaliza experiencias y optimiza operaciones con IA conversacional.</h3>
@@ -1049,10 +1049,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                                <div class="hero-banner background" style="background-image: url('./Images/dstrycomp.jpg');">
+                                <div class="hero-banner background" style="background-image: url('./Images/dstrycomp.jpg');" alt="Backup y Recuperación de Desastres">
                                     <div class="col text-center">
                                         <h1 class="display-3">Backup & Recuperación de Desastres (DR)</h1>
-                                        <h3>¿Pérdida de datos? ¡Imposible con nuestra solución! Respaldo seguro y simple en la nube.</h3>
+                                        <h3>¡No dejes que una catástrofe detenga tu negocio! Protege tus datos, garantiza la continuidad.</h3>
                                     </div>
                                 </div>
                             </div>
@@ -1062,58 +1062,59 @@
                 <div class="container py-5">
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
-                            <h4 class="mb-4">Protege tu Activo Más Valioso: Tus Datos</h4>
+                            <h4 class="mb-4">La Protección que tu Negocio Necesita para Seguir Adelante</h4>
                             <p class="lead">
-                                Las interrupciones de negocio debido a la pérdida de datos o fallos del sistema pueden ser devastadoras. En ExpertEase, ofrecemos una solución de Backup y Recuperación de Desastres (DR) rentable pero ultra confiable, basada en la nube. Operamos en una infraestructura compartida extremadamente consistente en diferentes partes del mundo, respaldando todos tus datos y servicios críticos, proporcionando recuperación en poco tiempo.
+                                La pérdida de datos o una interrupción del sistema puede ser devastadora. En ExpertEase, entendemos que la continuidad de tu negocio es primordial. Por eso, ofrecemos soluciones de **Backup y Recuperación de Desastres (DR) en la nube** que son no solo rentables, sino también increíblemente confiables. Con nuestra infraestructura global, tus datos críticos estarán siempre seguros y listos para ser recuperados en minutos, sin importar lo que pase.
                             </p>
                         </div>
                     </div>
 
                     <div class="row text-center mb-5">
-                        <h4 class="mb-4">Nuestro Proceso de Protección de Datos</h4>
+                        <h4 class="mb-4">Así Aseguramos la Resiliencia de tus Datos</h4>
                         <div class="col-md-6 mb-4">
                             <div class="chatbot-card h-100 text-start">
-                                <h5 class="card-title"><i class="fas fa-copy me-2"></i> 1.- Réplica Inicial Segura</h5>
-                                <p>Como configuración inicial de los servicios en la nube, todos tus datos se replican en la nube en una ubicación remota para evitar que cualquier desastre en tu región afecte tus datos. Tu información crítica está a salvo desde el primer momento.</p>
+                                <h5 class="card-title"><i class="fas fa-copy me-2"></i> 1. Réplica Inicial Segura y Geográficamente Distribuida</h5>
+                                <p>Desde el primer momento, todos tus datos son replicados de forma segura en la nube, en ubicaciones remotas. Esto significa que un desastre local nunca afectará tu información vital, garantizando que tu negocio esté protegido desde el día uno.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="chatbot-card h-100 text-start">
-                                <h5 class="card-title"><i class="fas fa-calendar-check me-2"></i> 2.- Respaldos Programados e Increméntales</h5>
-                                <p>Programamos tareas de respaldo para proteger cualquier dato nuevo desde los servidores del cliente a la nube en los clústers remotos donde se guarda la réplica inicial. Estos respaldos incrementales aseguran que absolutamente ningún dato se pierda, incluso en caso de una catástrofe inesperada, optimizando el ancho de banda y el almacenamiento.</p>
+                                <h5 class="card-title"><i class="fas fa-calendar-check me-2"></i> 2. Respaldos Continuos e Inteligentes</h5>
+                                <p>Configuramos respaldos incrementales automáticos que solo registran los cambios más recientes. Esto optimiza el uso del ancho de banda y el almacenamiento, asegurando que cada nuevo dato esté protegido sin sobrecargar tu red. ¡Tu información siempre actualizada y segura!</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="row justify-content-center text-start mb-5">
-                        <h4 class="mb-4 text-center">¿Por qué optar por nuestra solución de DR?</h4>
+                        <h4 class="mb-4 text-center">Beneficios Clave de Nuestra Solución DR: Tu Tranquilidad Garantizada</h4>
                         <div class="col-lg-8">
                             <ul>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> El respaldo delta solo realiza un seguimiento de los cambios actuales, en lugar de congestionar la red con datos irrelevantes y redundantes, optimizando tus recursos.</li>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Medidas preventivas que te ahorran disgustos innecesarios en momentos de falsas alarmas, con recuperaciones en minutos.</li>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Centros de datos remotos alrededor del mundo para proteger tus datos sin importar qué, garantizando la máxima disponibilidad.</li>
-                                <li class="mb-2"><i class="fas fa-arrow-right me-2"></i> Plataforma fácil de usar para configurar el proceso de replicación desde la comodidad de tu navegador, eliminando la complejidad.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Recuperación Ultra-Rápida:** Vuelve a la operación en cuestión de minutos, no horas o días, minimizando el impacto de cualquier interrupción.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Protección Total:** Tus datos están seguros en centros de datos remotos y redundantes, preparados para cualquier eventualidad.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Eficiencia de Recursos:** El respaldo inteligente reduce la congestión de red y optimiza tu almacenamiento, ahorrándote costos.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Simplicidad en la Gestión:** Configura y monitorea tus respaldos fácilmente desde una plataforma intuitiva.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Costo-Efectividad:** Obtén una protección de nivel empresarial sin la necesidad de grandes inversiones en infraestructura física.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary btn-lg" onclick="uncover('contactform')">¡Protege tu Negocio Ahora!</a>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="uncover('contactform')">¡Protege tu Negocio Hoy! Contáctanos</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Virtualización de Red (NFV) -->
-            <div class="row men text-center" id="vred" style="display: none; padding: 0 !important;">
+            <!-- Almacenamiento en la Nube (Reemplazo de NFV) -->
+            <div class="row men text-center" id="almacenamientoNube" style="display: none; padding: 0 !important;">
                 <div class="col-12">
-                    <div id="nfvCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div id="almacenamientoNubeCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                                <div class="hero-banner background" style="background-image: url('./Images/netvirt.png');">
+                                <div class="hero-banner background" style="background-image: url('./Images/cloud_storage.jpg');" alt="Almacenamiento en la Nube">
                                     <div class="col text-center">
-                                        <h1 class="display-3">Virtualización de Red (NFV)</h1>
-                                        <h3>Transforma tu infraestructura de red. Agilidad, flexibilidad y eficiencia sin precedentes.</h3>
+                                        <h1 class="display-3">Almacenamiento en la Nube</h1>
+                                        <h3>Guarda, Accede y Protege tus Datos con Flexibilidad y Seguridad Inigualables.</h3>
                                     </div>
                                 </div>
                             </div>
@@ -1123,54 +1124,52 @@
                 <div class="container py-5">
                     <div class="row justify-content-center text-center mb-5">
                         <div class="col-lg-10">
-                            <h4 class="mb-4">NFV: El Futuro de tu Infraestructura de Red</h4>
+                            <h4 class="mb-4">La Solución Perfecta para tus Necesidades de Datos</h4>
                             <p class="lead">
-                                Network Functions Virtualization (NFV) es una plataforma de virtualización de red diseñada para acelerar la transformación digital de tu negocio. Consiste en transformar las funciones de red tradicionales, basadas en hardware, en una plataforma de software. NFV te permite ofrecer servicios de red ágiles, flexibles y rentables, adaptándose a las crecientes demandas de tu entorno.
+                                En la era digital, la cantidad de datos que gestionan las empresas crece exponencialmente. Necesitas una solución de almacenamiento que sea **escalable, segura y accesible** desde cualquier lugar. ExpertEase te ofrece un portafolio completo de servicios de almacenamiento en la nube, diseñados para adaptarse a cada tipo de dato y necesidad de tu negocio.
                             </p>
                         </div>
                     </div>
 
-                    <div class="row justify-content-center text-start mb-5">
-                        <h4 class="mb-4 text-center">Características Clave de Nuestra Solución NFV</h4>
-                        <div class="col-lg-8">
-                            <dl class="row">
-                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-rocket me-2"></i> Implementación Ágil y Flexible</dt>
-                                <dd class="col-12 col-md-8">
-                                    <p>NFV se puede desplegar rápidamente en cualquier entorno de nube, lo que permite ofrecer nuevos servicios en cuestión de minutos, reduciendo drásticamente los tiempos de lanzamiento.</p>
-                                </dd>
-                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-arrows-alt-h me-2"></i> Escalabilidad y Elasticidad</dt>
-                                <dd class="col-12 col-md-8">
-                                    <p>La plataforma se puede escalar horizontal y verticalmente para satisfacer las demandas dinámicas del ambiente, asegurando que siempre tengas los recursos necesarios.</p>
-                                </dd>
-                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-check-double me-2"></i> Alta Disponibilidad Garantizada</dt>
-                                <dd class="col-12 col-md-8">
-                                    <p>NFV está diseñado para ofrecer un alto nivel de disponibilidad y confianza, lo que garantiza que los servicios de red estén siempre disponibles y funcionando sin interrupciones.</p>
-                                </dd>
-                                <dt class="col-12 col-md-4" style="color: #222;"><i class="fas fa-link me-2"></i> Integración Sencilla con Otros Ambientes</dt>
-                                <dd class="col-12 col-md-8">
-                                    <p>La plataforma se integra fácilmente con otros sistemas y aplicaciones, lo que permite crear soluciones de sitio a sitio complejas y eficientes.</p>
-                                </dd>
-                            </dl>
+                    <div class="row text-center mb-5">
+                        <h4 class="mb-4">Descubre Nuestros Tipos de Almacenamiento en la Nube</h4>
+                        <div class="col-md-4 mb-4">
+                            <div class="chatbot-card h-100">
+                                <i class="fas fa-cube icon"></i>
+                                <h5>Almacenamiento de Bloque (Block Storage)</h5>
+                                <p>Ideal para aplicaciones que exigen **alto rendimiento y baja latencia**, como bases de datos, sistemas operativos de servidores y máquinas virtuales. Actúa como un disco duro virtual, ofreciendo la velocidad que tus aplicaciones más críticas necesitan.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="chatbot-card h-100">
+                                <i class="fas fa-box-open icon"></i>
+                                <h5>Almacenamiento de Objeto (Object Storage)</h5>
+                                <p>Perfecto para **grandes volúmenes de datos no estructurados** que requieren escalabilidad ilimitada y acceso flexible. Piensa en backups, archivos multimedia, logs, datos de Big Data y archivos estáticos de sitios web. Accede a tus objetos fácilmente vía API.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="chatbot-card h-100">
+                                <i class="fas fa-share-alt icon"></i>
+                                <h5>Almacenamiento NFS (Network File Storage)</h5>
+                                <p>Permite **compartir archivos de forma centralizada y eficiente** a través de la red. Es ideal para entornos donde múltiples servidores o usuarios necesitan acceder a los mismos datos de forma concurrente, facilitando la colaboración y la gestión de archivos compartidos.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="row justify-content-center text-start mb-5">
-                        <h4 class="mb-4 text-center">Funcionalidades Avanzadas</h4>
+                        <h4 class="mb-4 text-center">Beneficios de Elegir el Almacenamiento en la Nube de ExpertEase</h4>
                         <div class="col-lg-8">
                             <ul>
-                                <li class="mb-2"><i class="fas fa-network-wired me-2"></i> Soporte de alta disponibilidad utilizando el protocolo VRRP a través de keepalived, garantizando la continuidad.</li>
-                                <li class="mb-2"><i class="fas fa-route me-2"></i> Enrutamiento avanzado entre redes virtuales conectadas para una administración de tráfico óptima.</li>
-                                <li class="mb-2"><i class="fas fa-lock me-2"></i> VPN de cliente utilizando OpenVPN para conexiones seguras y cifradas.</li>
-                                <li class="mb-2"><i class="fas fa-sitemap me-2"></i> Soporte de subneteo para redes privadas, ofreciendo granularidad y control.</li>
-                                <li class="mb-2"><i class="fas fa-balance-scale-left me-2"></i> Funciones de balanceo de cargas L4 (TCP/UDP) y L7 (HTTP, HTTPS) para distribuir el tráfico eficientemente.</li>
-                                <li class="mb-2"><i class="fas fa-globe-americas me-2"></i> Soporte de VPN de sitio a sitio (S2S) utilizando StrongSwan para interconexión segura de redes.</li>
-                                <li class="mb-2"><i class="fas fa-shield-alt me-2"></i> Protección DDoS integrada para salvaguardar tu infraestructura contra ataques.</li>
-                                <li class="mb-2"><i class="fas fa-wifi me-2"></i> Capacidades SD-WAN para optimizar el rendimiento de la red y reducir costos.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Escalabilidad Ilimitada:** Crece sin preocupaciones. Añade o reduce capacidad de almacenamiento al instante, pagando solo por lo que usas.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Seguridad Avanzada:** Tus datos están protegidos con cifrado de última generación y estrictos protocolos de seguridad en nuestros centros de datos.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Accesibilidad Total:** Accede a tus archivos desde cualquier lugar y en cualquier momento, con una conexión a internet.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Costo-Eficiencia:** Elimina la necesidad de invertir en hardware costoso y su mantenimiento. Optimiza tu presupuesto de TI.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> **Fiabilidad y Respaldo:** Infraestructura robusta con redundancia para asegurar la disponibilidad y la integridad de tus datos.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary btn-lg" onclick="uncover('contactform')">¡Optimiza tu Red con NFV!</a>
+                        <a href="#" class="btn btn-primary btn-lg" onclick="uncover('contactform')">¡Optimiza tu Gestión de Datos Ahora!</a>
                     </div>
                 </div>
             </div>
@@ -1182,7 +1181,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                                <div class="hero-banner background" style="background-image: url('./Images/devops.jpg');">
+                                <div class="hero-banner background" style="background-image: url('./Images/devops.jpg');" alt="DevOps como Servicio">
                                     <div class="col text-center">
                                         <h1 class="display-3">DevOps as a Service</h1>
                                         <h3>Tu código merece una implementación sin estrés. Deja que nuestros expertos en DevOps hagan la magia.</h3>
@@ -1247,7 +1246,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                                <div class="hero-banner background" style="background-image: url('./Images/Consult.jpg');">
+                                <div class="hero-banner background" style="background-image: url('./Images/Consult.jpg');" alt="Servicios de Consultoría">
                                     <div class="col text-center">
                                         <h1 class="display-3">Consultoría Tecnológica Estratégica</h1>
                                         <h3>Navega el futuro con confianza. Expertos a tu lado para cada desafío digital.</h3>
@@ -1326,7 +1325,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- Se añade la clase 'background' para la superposición oscura uniforme -->
-                                <div class="hero-banner background" style="background-image: url('./Images/cloud.jpeg');">
+                                <div class="hero-banner background" style="background-image: url('./Images/cloud.jpeg');" alt="Sobre Nosotros">
                                     <div class="col text-center">
                                         <h1 class="display-3">Somos Expertos en Tecnología</h1>
                                         <h3>Tu socio estratégico en el camino hacia la innovación y el éxito.</h3>
@@ -1455,3 +1454,4 @@
 </body>
 
 </html>
+    
