@@ -104,7 +104,7 @@ const gaDat = () => {
 
 
 function contact(data) {
-    const phoneNumber = '7222450592';
+    const phoneNumber = '5576702527';
     const message = encodeURIComponent(data);
     console.log('message', message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
